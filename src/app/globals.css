@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+/*
+ * Class-based dark variant. Apply by toggling `class="dark"` on <html>.
+ * This overrides Tailwind 4's default media-query strategy so we control
+ * theme switching from the UI.
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Brutalist / Precision design tokens.
+ * Hard edges, industrial palette, electric-lime accent.
+ * Every radius token is collapsed to 0 so any `rounded-*` utility
+ * (including third-party components) renders as square corners.
+ */
+@theme {
+  /* Kill every radius token */
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-2xl: 0;
+  --radius-3xl: 0;
+  --radius-4xl: 0;
+  --radius-full: 0;
+
+  /* Light-mode palette (default) */
+  --color-paper: #ffffff;
+  --color-paper-soft: #f5f5f5;
+  --color-paper-mute: #e5e5e7;
+  --color-ink: #0b0b0c;
+  --color-ink-soft: #2a2a2e;
+  --color-ink-mute: #5a5a62;
+  --color-rule: #111114;
+
+  /* Inverse (kept for dark-surface composition) */
+  --color-night: #0b0b0c;
+  --color-night-soft: #15151a;
+  --color-night-mute: #1f1f25;
+
+  /* Electric-lime accent — used for selection, focus rings,
+     section numbers, currently-strip arrows, and other moments
+     of deliberate emphasis. */
+  --color-accent: #a6f500;
+  --color-accent-soft: #c7ff4d;
+  --color-accent-deep: #6fa600;
+
+  /* Type system tied to next/font CSS variables */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SFMono-Regular",
+    "Cascadia Mono", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+/* Dark-mode palette — overrides the same variable names so every
+   utility (bg-paper, text-ink, border-ink, …) flips automatically. */
+.dark {
+  --color-paper: #0b0b0c;
+  --color-paper-soft: #15151a;
+  --color-paper-mute: #1f1f25;
+  --color-ink: #f0f0f0;
+  --color-ink-soft: #c9c9c9;
+  --color-ink-mute: #8c8c92;
+  --color-rule: #2a2a2e;
+  --color-accent-deep: #c7ff4d;
+}
+
+/* Safety net: any element that slips a radius through gets squared off. */
+*,
+*::before,
+*::after {
+  border-radius: 0 !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #0b0b0c;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Print stylesheet — when someone hits Cmd/Ctrl+P, the portfolio
+   prints as a clean black-on-white CV-style document. */
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  @page {
+    margin: 1.4cm;
+    size: A4;
+  }
+
+  /* Hide chrome that doesn't belong on paper */
+  header.sticky,
+  nav,
+  aside,
+  footer,
+  button,
+  a[download],
+  a[href="#contact"],
+  #hero a[href*="github.com"],
+  #hero a[href*="linkedin.com"],
+  #hero a[href*="x.com"],
+  #hero a[href*="instagram.com"] {
+    display: none !important;
+  }
+
+  /* Section breathing room for paper */
+  section {
+    padding: 1cm 0 !important;
+    border-top: 1px solid #000 !important;
+    break-inside: avoid;
+  }
+
+  /* Don't split cards / roles across pages */
+  article,
+  li {
+    break-inside: avoid;
+  }
+
+  /* Show external URLs in print so they're useful when offline */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #444 !important;
+    font-weight: normal;
+  }
+}

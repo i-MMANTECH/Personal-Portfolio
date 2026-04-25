@@ -1,0 +1,26 @@
+# Netlify build configuration for the Next.js portfolio.
+# The official @netlify/plugin-nextjs is auto-installed by Netlify on
+# detection of next as a dependency, so no plugin block is needed here.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--no-fund --no-audit"
+  NEXT_TELEMETRY_DISABLED = "1"
+
+# Long-cache static assets (images, fonts, public/) — Netlify already
+# fingerprints _next/static, but explicit headers for /images keep the
+# CDN warm.
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/Emmanuel-Aro-The-Nerd-CV.pdf"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+    Content-Disposition = "attachment; filename=Emmanuel-Aro-The-Nerd-CV.pdf"
