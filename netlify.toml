@@ -1,15 +1,19 @@
 # Netlify build configuration for the Next.js portfolio.
-# The official @netlify/plugin-nextjs is auto-installed by Netlify on
-# detection of next as a dependency, so no plugin block is needed here.
+# The official @netlify/plugin-nextjs handles the publish directory and
+# function wiring; no `publish` key here on purpose — that conflicts with
+# the plugin in v5+.
 
 [build]
   command = "npm run build"
-  publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "22"
+  NODE_VERSION = "20"
   NPM_FLAGS = "--no-fund --no-audit"
   NEXT_TELEMETRY_DISABLED = "1"
+
+# Explicit declaration so the plugin loads even if auto-detection misses it.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 # Long-cache static assets (images, fonts, public/) — Netlify already
 # fingerprints _next/static, but explicit headers for /images keep the
