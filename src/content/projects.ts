@@ -13,6 +13,18 @@ export type Project = {
 
 export const projects: readonly Project[] = [
   {
+    id: "nativetalk-ticketing",
+    title: "Nativetalk Ticketing",
+    category: "Web",
+    year: "2026",
+    description:
+      "Centralized ticket-management dashboard for the Nativetalk support stack — tracks customer inquiries, manages agent assignment, and surfaces completion-rate metrics through a single operator view. Built on a typed API contract with role-based access for admin operators.",
+    tech: ["Next.js", "TypeScript", "REST APIs", "Vercel"],
+    links: {
+      live: "https://ticket-matrix-six.vercel.app",
+    },
+  },
+  {
     id: "boxonia-blueprint",
     title: "Boxonia Blueprint",
     category: "Web",
