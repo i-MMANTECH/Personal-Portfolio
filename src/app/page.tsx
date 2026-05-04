@@ -1,6 +1,6 @@
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
-import { CurrentlyStrip } from "@/components/CurrentlyStrip";
+import { Marquee } from "@/components/Marquee";
 import { Hero } from "@/sections/Hero";
 import { About } from "@/sections/About";
 import { Stack } from "@/sections/Stack";
@@ -14,7 +14,7 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <CurrentlyStrip />
+        <Marquee />
         <About />
         <Stack />
         <Experience />

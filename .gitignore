@@ -42,3 +42,4 @@ yarn-error.log*
 
 # Memory store maintained by the dev assistant
 /memory/
+config.bat

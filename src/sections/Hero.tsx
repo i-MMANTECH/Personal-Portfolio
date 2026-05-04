@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
+import { MagneticButton } from "@/components/ui/MagneticButton";
 import { profile } from "@/content/profile";
 
 export function Hero() {
@@ -33,83 +34,104 @@ export function Hero() {
         </Reveal>
 
         <div className="md:col-span-7 lg:col-span-8 order-2 md:order-1">
-          <Reveal delay={0}>
-            <p className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.4em] text-ink-mute">
-              {`// ${profile.location} · 09073318795`}
-            </p>
-          </Reveal>
+          <p
+            className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.4em] text-ink-mute opacity-0"
+            style={{ animation: "hero-reveal 800ms cubic-bezier(0.2,0.8,0.2,1) forwards" }}
+          >
+            {`// ${profile.location} · 09073318795`}
+          </p>
 
-          <Reveal delay={80}>
-            <h1 className="mt-6 font-mono text-[2.5rem] leading-[0.95] sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-ink">
-              {nameParts.map((part) => (
-                <span key={part} className="block">
-                  {part}
-                </span>
-              ))}
-            </h1>
-          </Reveal>
+          <h1 className="hero-stagger mt-6 font-mono text-[2.5rem] leading-[0.95] sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-ink">
+            {nameParts.map((part, i) => (
+              <span
+                key={part}
+                className="block"
+                style={{ ["--reveal-delay" as string]: `${120 + i * 130}ms` }}
+              >
+                {part}
+              </span>
+            ))}
+          </h1>
 
-          <Reveal delay={160}>
-            <p className="mt-6 font-mono text-xs sm:text-sm uppercase tracking-[0.25em] text-ink-soft">
-              Software Engineering{" "}
-              <span className="text-accent-deep font-bold">Nerd</span>
-              {" · "}
-              {profile.focus.join(" · ")}
-            </p>
-          </Reveal>
+          <p
+            className="mt-6 font-mono text-xs sm:text-sm uppercase tracking-[0.25em] text-ink-soft opacity-0"
+            style={{
+              animation: "hero-reveal 800ms cubic-bezier(0.2,0.8,0.2,1) forwards",
+              animationDelay: "420ms",
+            }}
+          >
+            Software Engineering{" "}
+            <span className="text-accent-deep font-bold">Nerd</span>
+            {" · "}
+            {profile.focus.join(" · ")}
+          </p>
 
-          <Reveal delay={240}>
-            <p className="mt-8 max-w-2xl text-base md:text-lg leading-relaxed text-ink-soft">
-              {profile.tagline}
-            </p>
-          </Reveal>
+          <p
+            className="mt-8 max-w-2xl text-base md:text-lg leading-relaxed text-ink-soft opacity-0"
+            style={{
+              animation: "hero-reveal 800ms cubic-bezier(0.2,0.8,0.2,1) forwards",
+              animationDelay: "540ms",
+            }}
+          >
+            {profile.tagline}
+          </p>
 
-          <Reveal delay={320}>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <a
-                href={profile.cvPath}
-                download
-                className="inline-flex items-center justify-center gap-2 bg-accent text-ink border border-accent font-mono text-xs uppercase tracking-widest font-bold px-6 py-4 hover:bg-ink hover:text-accent hover:border-ink transition-colors"
-              >
-                Download CV <span aria-hidden>→</span>
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center gap-2 border border-ink text-ink font-mono text-xs uppercase tracking-widest px-6 py-4 hover:bg-ink hover:text-paper transition-colors"
-              >
-                Get in touch <span aria-hidden>→</span>
-              </a>
-            </div>
-          </Reveal>
+          <div
+            className="mt-10 flex flex-col sm:flex-row gap-4 opacity-0"
+            style={{
+              animation: "hero-reveal 800ms cubic-bezier(0.2,0.8,0.2,1) forwards",
+              animationDelay: "660ms",
+            }}
+          >
+            <MagneticButton
+              href={profile.cvPath}
+              download
+              className="bg-accent text-ink border border-accent font-mono text-xs uppercase tracking-widest font-bold px-6 py-4 hover:bg-ink hover:text-accent hover:border-ink"
+              strength={0.32}
+            >
+              Download CV <span aria-hidden>→</span>
+            </MagneticButton>
+            <MagneticButton
+              href="#contact"
+              className="border border-ink text-ink font-mono text-xs uppercase tracking-widest px-6 py-4 hover:bg-ink hover:text-paper"
+              strength={0.22}
+            >
+              Get in touch <span aria-hidden>→</span>
+            </MagneticButton>
+          </div>
 
-          <Reveal delay={400}>
-            <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 font-mono text-[10px] sm:text-xs uppercase tracking-[0.25em]">
-              <a
-                href={profile.social.github}
-                target="_blank"
-                rel="noreferrer"
-                className="text-ink-mute hover:text-ink underline-offset-4 hover:underline transition-colors"
-              >
-                GitHub
-              </a>
-              <a
-                href={profile.social.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="text-ink-mute hover:text-ink underline-offset-4 hover:underline transition-colors"
-              >
-                LinkedIn
-              </a>
-              <a
-                href={profile.social.x}
-                target="_blank"
-                rel="noreferrer"
-                className="text-ink-mute hover:text-ink underline-offset-4 hover:underline transition-colors"
-              >
-                X / Twitter
-              </a>
-            </div>
-          </Reveal>
+          <div
+            className="mt-10 flex flex-wrap gap-x-6 gap-y-3 font-mono text-[10px] sm:text-xs uppercase tracking-[0.25em] opacity-0"
+            style={{
+              animation: "hero-reveal 800ms cubic-bezier(0.2,0.8,0.2,1) forwards",
+              animationDelay: "780ms",
+            }}
+          >
+            <a
+              href={profile.social.github}
+              target="_blank"
+              rel="noreferrer"
+              className="text-ink-mute hover:text-ink underline-offset-4 hover:underline transition-colors"
+            >
+              GitHub
+            </a>
+            <a
+              href={profile.social.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="text-ink-mute hover:text-ink underline-offset-4 hover:underline transition-colors"
+            >
+              LinkedIn
+            </a>
+            <a
+              href={profile.social.x}
+              target="_blank"
+              rel="noreferrer"
+              className="text-ink-mute hover:text-ink underline-offset-4 hover:underline transition-colors"
+            >
+              X / Twitter
+            </a>
+          </div>
         </div>
       </div>
     </section>
