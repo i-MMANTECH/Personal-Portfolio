@@ -8,7 +8,7 @@ export function About() {
       id="about"
       number="01."
       label="// ABOUT"
-      title="A snapshot of the operator."
+      title="A bit about me."
     >
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
         <div className="md:col-span-5 lg:col-span-4">

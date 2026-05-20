@@ -15,10 +15,10 @@ export const experience: readonly Role[] = [
     location: "Lagos, NG",
     current: true,
     bullets: [
-      "Architected TaskForge Pro, a high-throughput team-management platform on Django Ninja + Next.js + PostgreSQL with strict typed API contracts.",
-      "Hardened security posture via JWT auth and a Postman endpoint-coverage regime that catches regressions before staging.",
-      "Shipped core contributions to the omnichannel-crm service; refactored backend logic for horizontal scalability.",
-      "Standardized local + staging environments with Docker, eliminating environment drift across the team.",
+      "I architected TaskForge Pro, a high-throughput team-management platform on Django Ninja + Next.js + PostgreSQL with strict typed API contracts.",
+      "I hardened the security posture with JWT auth and a Postman endpoint-coverage regime that catches regressions before staging.",
+      "I shipped core contributions to the omnichannel-crm service and refactored its backend logic for horizontal scalability.",
+      "I standardized local and staging environments with Docker, eliminating environment drift across the team.",
     ],
   },
   {
@@ -27,8 +27,8 @@ export const experience: readonly Role[] = [
     period: "Sep 2025 — Jan 2026",
     location: "Lagos, NG",
     bullets: [
-      "Architected Next.js UI layers for high-load applications, lifting frontend performance budgets and SEO posture.",
-      "Re-modeled MySQL schemas and rewrote hot-path queries — accelerated data retrieval by 20% under peak load.",
+      "I architected Next.js UI layers for high-load applications, lifting frontend performance budgets and SEO posture.",
+      "I re-modeled MySQL schemas and rewrote hot-path queries — I accelerated data retrieval by 20% under peak load.",
     ],
   },
   {
@@ -38,8 +38,8 @@ export const experience: readonly Role[] = [
     location: "Lagos, NG",
     current: true,
     bullets: [
-      "Built a centralized digital ecosystem in Python consolidating story-development and talent-management for global film productions.",
-      "Shipped a talent-booking platform that removed cross-border coordination bottlenecks for high-profile international clients.",
+      "I built a centralized digital ecosystem in Python that consolidates story-development and talent-management for global film productions.",
+      "I shipped a talent-booking platform that removed cross-border coordination bottlenecks for high-profile international clients.",
     ],
   },
   {
@@ -48,8 +48,8 @@ export const experience: readonly Role[] = [
     period: "Apr 2024 — Aug 2024",
     location: "Ibadan, NG",
     bullets: [
-      "Shipped multiple full-stack applications and introduced automated testing pipelines — raised delivery velocity by 25%.",
-      "Led an AWS migration; re-planned resource allocation to cut infra overhead while preserving SLA targets.",
+      "I shipped multiple full-stack applications and introduced automated testing pipelines — I raised delivery velocity by 25%.",
+      "I led an AWS migration and re-planned resource allocation to cut infra overhead while preserving SLA targets.",
     ],
   },
   {
@@ -58,8 +58,8 @@ export const experience: readonly Role[] = [
     period: "May 2023 — Feb 2024",
     location: "California, US (Remote)",
     bullets: [
-      "Designed Python / Django automation pipelines lifting operational throughput by 30% — replaced manual review loops.",
-      "Instituted a QA protocol that reduced data-entry error rates by 50% across containerized environments.",
+      "I designed Python / Django automation pipelines that lifted operational throughput by 30% and replaced manual review loops.",
+      "I instituted a QA protocol that reduced data-entry error rates by 50% across containerized environments.",
     ],
   },
   {
@@ -68,8 +68,8 @@ export const experience: readonly Role[] = [
     period: "Sep 2022 — Mar 2023",
     location: "Brussels, BE (Remote)",
     bullets: [
-      "Led a 7-engineer team through end-to-end architecture, build, and deployment of the company's flagship platform.",
-      "Delivered the first successful product launch in company history; owned review standards, branching, and cutover plan.",
+      "I led a 7-engineer team through the end-to-end architecture, build, and deployment of the company's flagship platform.",
+      "I delivered the first successful product launch in company history and owned review standards, branching, and the cutover plan.",
     ],
   },
 ] as const;

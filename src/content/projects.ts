@@ -18,9 +18,10 @@ export const projects: readonly Project[] = [
     category: "Web",
     year: "2026",
     description:
-      "Centralized ticket-management dashboard for the Nativetalk support stack — tracks customer inquiries, manages agent assignment, and surfaces completion-rate metrics through a single operator view. Built on a typed API contract with role-based access for admin operators.",
+      "I built a centralized ticket-management dashboard for the Nativetalk support stack — it tracks customer inquiries, manages agent assignment, and surfaces completion-rate metrics in a single operator view. I designed it around a typed API contract with role-based access for admin operators.",
     tech: ["Next.js", "TypeScript", "REST APIs", "Vercel"],
     links: {
+      code: "https://github.com/i-MMANTECH/Ticket-Matrix",
       live: "https://ticket-matrix-six.vercel.app",
     },
   },
@@ -30,9 +31,10 @@ export const projects: readonly Project[] = [
     category: "Web",
     year: "2025",
     description:
-      "Production digital platform for global film production — centralizes story-development pipelines and talent-management workflows. Powers a talent-booking layer that removes cross-border coordination friction for high-profile international clients.",
+      "I built a production digital platform for global film production that centralizes story-development pipelines and talent-management workflows. I shipped a talent-booking layer that removed cross-border coordination friction for high-profile international clients.",
     tech: ["Python", "REST APIs", "Web Platform"],
     links: {
+      code: "https://github.com/i-MMANTECH/boxonia_strezz",
       live: "https://www.boxonia.com/",
     },
   },
@@ -42,10 +44,10 @@ export const projects: readonly Project[] = [
     category: "AI/ML",
     year: "2024",
     description:
-      "Python-based security platform applying supervised ML to real-time malware identification and classification. Delivers predictive threat analysis for enterprise endpoints; pipeline structured for retraining on evolving threat corpora.",
+      "I built a Python security platform that applies supervised machine learning to real-time malware identification and classification. I structured the pipeline to retrain on evolving threat corpora so it stays accurate as new malware emerges.",
     tech: ["Python", "Scikit-learn", "Security ML", "Pandas"],
     links: {
-      code: "https://github.com/i-MMANTECH",
+      code: "https://github.com/i-MMANTECH/Malware-Detection-Python-Project",
     },
   },
   {
@@ -54,10 +56,10 @@ export const projects: readonly Project[] = [
     category: "AI/ML",
     year: "2024",
     description:
-      "NLP pipeline extracting and categorizing persons, locations, and dates from unstructured text. Reusable structured-output component for search and ingest pipelines.",
+      "I designed and shipped an NLP pipeline that extracts and categorizes persons, locations, and dates from unstructured text. I built it as a reusable structured-output component for search and ingest workflows.",
     tech: ["Python", "NLP", "Information Retrieval"],
     links: {
-      code: "https://github.com/i-MMANTECH",
+      code: "https://github.com/i-MMANTECH/imman_NER_model",
     },
   },
   {
@@ -66,10 +68,10 @@ export const projects: readonly Project[] = [
     category: "AI/ML",
     year: "2024",
     description:
-      "High-accuracy diagnostic model trained on clinical datasets for proactive risk assessment. Emphasis on reproducible feature engineering and explainable classification outputs for clinical review contexts.",
+      "I built a high-accuracy diagnostic model on clinical datasets for proactive cancer risk assessment. I focused on reproducible feature engineering and explainable classification outputs suited to clinical review.",
     tech: ["Python", "Scikit-learn", "Pandas", "Clinical Data"],
     links: {
-      code: "https://github.com/i-MMANTECH",
+      code: "https://github.com/i-MMANTECH/imman_Cancer_prediction_model",
     },
   },
   {
@@ -78,10 +80,10 @@ export const projects: readonly Project[] = [
     category: "AI/ML",
     year: "2023",
     description:
-      "Computer-vision attendance platform combining application-tier capture with recognition pipelines. Captures, normalizes, and classifies facial images, persisting events to a secured relational store. Productionized for institutions and live events.",
+      "I engineered a computer-vision attendance platform that captures, normalizes, and classifies facial images, then persists attendance events to a secured store. I productionized it for institutions and live events.",
     tech: ["PHP", "JavaScript", "OpenCV", "MySQL"],
     links: {
-      code: "https://github.com/i-MMANTECH",
+      code: "https://github.com/i-MMANTECH/imman_Facial_recognition_Attendance_System",
     },
   },
   {
@@ -90,7 +92,7 @@ export const projects: readonly Project[] = [
     category: "Web",
     year: "2023",
     description:
-      "Browser-native image editor with filter, crop, and export pipeline. Demonstrates canvas-based compositing and stateless transformation flow.",
+      "I built a browser-native image editor with a filter, crop, and export pipeline. I implemented canvas-based compositing with a stateless transformation flow.",
     tech: ["HTML", "CSS", "JavaScript", "Canvas API"],
     links: {
       code: "https://github.com/i-MMANTECH/image-editor",
@@ -103,7 +105,7 @@ export const projects: readonly Project[] = [
     category: "Web",
     year: "2023",
     description:
-      "Real-time translation interface integrating a public translation API with a clean input/output state model. Built as a single-page application with minimal dependencies.",
+      "I built a real-time translation interface on top of a public translation API. I designed it as a single-page app with a clean input/output state model and minimal dependencies.",
     tech: ["JavaScript", "REST APIs", "CSS"],
     links: {
       code: "https://github.com/i-MMANTECH/imman_translator",
@@ -116,7 +118,7 @@ export const projects: readonly Project[] = [
     category: "Web",
     year: "2023",
     description:
-      "Real-time weather client integrating geolocation with a public weather API. Conditional rendering for forecast states and a minimal-dependency component architecture focused on responsive load behavior.",
+      "I built a real-time weather app that integrates geolocation and a public weather API. I implemented conditional rendering for forecast states with a minimal-dependency component architecture.",
     tech: ["JavaScript", "REST APIs", "Geolocation"],
     links: {
       code: "https://github.com/i-MMANTECH/imman_Weather_App",

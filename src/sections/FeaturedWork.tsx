@@ -8,7 +8,7 @@ export function FeaturedWork() {
       id="work"
       number="04."
       label="// FEATURED WORK"
-      title="Selected projects."
+      title="Things I've built."
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-start">
         {projects.map((project, i) => (

@@ -11,7 +11,7 @@ export const profile = {
   focus: ["Systems", "Platforms", "Applied AI"] as const,
   location: "Lagos, Nigeria",
   tagline:
-    "Software Engineering Nerd architecting scalable, production-grade platforms at the intersection of web systems and applied machine learning.",
+    "I'm a Software Engineering Nerd. I architect scalable, production-grade platforms at the intersection of web systems and applied machine learning.",
   bio: [
     "I operate end-to-end as a Full Stack Software Engineer across the Python / Django Ninja and Next.js (App Router) / TypeScript ecosystems, with a working discipline built around strict typing, containerized delivery, and measurable system outcomes.",
     "I care about defensible API surfaces, decoupled architecture, and infrastructure that holds under load. From shipping internal CRMs to retraining ML models on evolving threat data, the through-line is the same: I build systems, not features.",

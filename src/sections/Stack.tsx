@@ -7,7 +7,7 @@ export function Stack() {
       id="stack"
       number="02."
       label="// STACK"
-      title="Tools that ship the work."
+      title="Tools that ship my work."
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {stack.map((group) => (
