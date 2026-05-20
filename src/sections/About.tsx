@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Section } from "@/components/ui/Section";
+import { CountUp } from "@/components/ui/CountUp";
 import { profile } from "@/content/profile";
 
 export function About() {
@@ -31,7 +32,7 @@ export function About() {
                 Experience
               </p>
               <p className="font-mono text-2xl md:text-3xl font-bold text-ink">
-                {profile.meta.experienceYears}
+                <CountUp value={5} suffix="+" />
               </p>
               <p className="mt-1 text-sm text-ink-soft">
                 Years in Full-Stack Engineering

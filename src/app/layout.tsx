@@ -2,6 +2,9 @@ import type { Metadata, Viewport } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 
+import { Preloader } from "@/components/Preloader";
+import { ScrollProgress } from "@/components/ScrollProgress";
+import { GrainOverlay } from "@/components/GrainOverlay";
 import "./globals.css";
 
 const SITE_URL = "https://emmanuelaro.netlify.app";
@@ -95,9 +98,17 @@ export default function RootLayout({
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        {/* JS-disabled fallback: never trap the page behind the preloader,
+            and always show the hero content. */}
+        <noscript>
+          <style>{`.preloader{display:none!important}.hero-rise{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
       </head>
       <body className="font-sans antialiased bg-paper text-ink">
+        <Preloader />
+        <ScrollProgress />
         {children}
+        <GrainOverlay />
       </body>
     </html>
   );

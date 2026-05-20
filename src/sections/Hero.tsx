@@ -1,7 +1,12 @@
 import Image from "next/image";
-import { Reveal } from "@/components/ui/Reveal";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { profile } from "@/content/profile";
+
+/** Per-element entrance delay (ms) — applied once the preloader adds
+ *  `loaded` to <html>. See `.hero-rise` in globals.css. */
+function delay(ms: number): React.CSSProperties {
+  return { ["--reveal-delay" as string]: `${ms}ms` };
+}
 
 export function Hero() {
   const nameParts = profile.name.toUpperCase().split(" ");
@@ -12,9 +17,9 @@ export function Hero() {
       className="relative flex items-center min-h-[calc(100dvh-4rem)] px-6 sm:px-10 lg:px-16 py-20 sm:py-24 md:py-28"
     >
       <div className="mx-auto w-full max-w-6xl grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 lg:gap-16 items-center">
-        <Reveal
-          delay={120}
-          className="md:col-span-5 lg:col-span-4 order-1 md:order-2"
+        <div
+          className="hero-rise md:col-span-5 lg:col-span-4 order-1 md:order-2"
+          style={delay(160)}
         >
           <div className="relative aspect-square w-full max-w-sm md:max-w-none mx-auto border border-ink overflow-hidden bg-paper-mute">
             <Image
@@ -31,22 +36,22 @@ export function Hero() {
               className="absolute -bottom-px -right-px h-10 w-10 bg-accent border-l border-t border-ink"
             />
           </div>
-        </Reveal>
+        </div>
 
         <div className="md:col-span-7 lg:col-span-8 order-2 md:order-1">
           <p
-            className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.4em] text-ink-mute opacity-0"
-            style={{ animation: "hero-reveal 800ms cubic-bezier(0.2,0.8,0.2,1) forwards" }}
+            className="hero-rise font-mono text-[10px] sm:text-xs uppercase tracking-[0.4em] text-ink-mute"
+            style={delay(0)}
           >
             {`// ${profile.location} · 09073318795`}
           </p>
 
-          <h1 className="hero-stagger mt-6 font-mono text-[2.5rem] leading-[0.95] sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-ink">
+          <h1 className="mt-6 font-mono text-[2.5rem] leading-[0.95] sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-ink">
             {nameParts.map((part, i) => (
               <span
                 key={part}
-                className="block"
-                style={{ ["--reveal-delay" as string]: `${120 + i * 130}ms` }}
+                className="hero-rise block"
+                style={delay(90 + i * 110)}
               >
                 {part}
               </span>
@@ -54,11 +59,8 @@ export function Hero() {
           </h1>
 
           <p
-            className="mt-6 font-mono text-xs sm:text-sm uppercase tracking-[0.25em] text-ink-soft opacity-0"
-            style={{
-              animation: "hero-reveal 800ms cubic-bezier(0.2,0.8,0.2,1) forwards",
-              animationDelay: "420ms",
-            }}
+            className="hero-rise mt-6 font-mono text-xs sm:text-sm uppercase tracking-[0.25em] text-ink-soft"
+            style={delay(320)}
           >
             Software Engineering{" "}
             <span className="text-accent-deep font-bold">Nerd</span>
@@ -67,21 +69,15 @@ export function Hero() {
           </p>
 
           <p
-            className="mt-8 max-w-2xl text-base md:text-lg leading-relaxed text-ink-soft opacity-0"
-            style={{
-              animation: "hero-reveal 800ms cubic-bezier(0.2,0.8,0.2,1) forwards",
-              animationDelay: "540ms",
-            }}
+            className="hero-rise mt-8 max-w-2xl text-base md:text-lg leading-relaxed text-ink-soft"
+            style={delay(430)}
           >
             {profile.tagline}
           </p>
 
           <div
-            className="mt-10 flex flex-col sm:flex-row gap-4 opacity-0"
-            style={{
-              animation: "hero-reveal 800ms cubic-bezier(0.2,0.8,0.2,1) forwards",
-              animationDelay: "660ms",
-            }}
+            className="hero-rise mt-10 flex flex-col sm:flex-row gap-4"
+            style={delay(540)}
           >
             <MagneticButton
               href={profile.cvPath}
@@ -101,11 +97,8 @@ export function Hero() {
           </div>
 
           <div
-            className="mt-10 flex flex-wrap gap-x-6 gap-y-3 font-mono text-[10px] sm:text-xs uppercase tracking-[0.25em] opacity-0"
-            style={{
-              animation: "hero-reveal 800ms cubic-bezier(0.2,0.8,0.2,1) forwards",
-              animationDelay: "780ms",
-            }}
+            className="hero-rise mt-10 flex flex-wrap gap-x-6 gap-y-3 font-mono text-[10px] sm:text-xs uppercase tracking-[0.25em]"
+            style={delay(650)}
           >
             <a
               href={profile.social.github}
