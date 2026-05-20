@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { MagneticButton } from "@/components/ui/MagneticButton";
+import { ParallaxPhoto } from "@/components/ui/ParallaxPhoto";
 import { profile } from "@/content/profile";
 
 /** Per-element entrance delay (ms) — applied once the preloader adds
@@ -21,21 +21,7 @@ export function Hero() {
           className="hero-rise md:col-span-5 lg:col-span-4 order-1 md:order-2"
           style={delay(160)}
         >
-          <div className="relative aspect-square w-full max-w-sm md:max-w-none mx-auto border border-ink overflow-hidden bg-paper-mute">
-            <Image
-              src="/images/profile.jpg"
-              alt={`${profile.name} — profile portrait`}
-              fill
-              priority
-              quality={95}
-              sizes="(max-width: 768px) 80vw, (max-width: 1280px) 33vw, 380px"
-              className="object-cover object-[center_28%] contrast-[1.04] saturate-[1.05]"
-            />
-            <span
-              aria-hidden
-              className="absolute -bottom-px -right-px h-10 w-10 bg-accent border-l border-t border-ink"
-            />
-          </div>
+          <ParallaxPhoto />
         </div>
 
         <div className="md:col-span-7 lg:col-span-8 order-2 md:order-1">

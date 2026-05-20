@@ -8,6 +8,8 @@ export type Project = {
   links: {
     code?: string;
     live?: string;
+    /** Internal route to a full case-study page. */
+    caseStudy?: string;
   };
 };
 
@@ -21,6 +23,7 @@ export const projects: readonly Project[] = [
       "I built a centralized ticket-management dashboard for the Nativetalk support stack — it tracks customer inquiries, manages agent assignment, and surfaces completion-rate metrics in a single operator view. I designed it around a typed API contract with role-based access for admin operators.",
     tech: ["Next.js", "TypeScript", "REST APIs", "Vercel"],
     links: {
+      caseStudy: "/work/nativetalk-ticketing",
       code: "https://github.com/i-MMANTECH/Ticket-Matrix",
       live: "https://ticket-matrix-six.vercel.app",
     },

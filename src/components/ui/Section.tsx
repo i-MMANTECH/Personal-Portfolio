@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/cn";
 import { Reveal } from "./Reveal";
+import { ScrambleText } from "./ScrambleText";
 
 type SectionProps = {
   id: string;
@@ -56,7 +57,7 @@ export function Section({
               )}
               {title && (
                 <h2 className="font-mono text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-ink leading-[1.05]">
-                  {title}
+                  <ScrambleText text={title} />
                 </h2>
               )}
             </header>
