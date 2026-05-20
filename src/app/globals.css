@@ -183,65 +183,6 @@ html.loaded .hero-rise {
   }
 }
 
-/* ============================================================== */
-/* Custom cursor — a lime ring that trails the pointer. The native */
-/* cursor stays visible; this layer is purely additive.            */
-/* ============================================================== */
-.custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 26px;
-  height: 26px;
-  border: 1.5px solid var(--color-accent);
-  pointer-events: none;
-  z-index: 95;
-  transition:
-    width 180ms ease,
-    height 180ms ease,
-    background-color 180ms ease;
-}
-
-.custom-cursor[data-hover="true"] {
-  width: 46px;
-  height: 46px;
-  background-color: color-mix(in srgb, var(--color-accent) 14%, transparent);
-}
-
-/* ============================================================== */
-/* Project-card spotlight — a soft lime glow tracking the pointer  */
-/* inside each Featured Work card (--mx/--my set on mousemove).    */
-/* ============================================================== */
-.project-card__spot {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 220ms ease;
-  background: radial-gradient(
-    circle 150px at var(--mx, 50%) var(--my, 50%),
-    color-mix(in srgb, var(--color-accent) 26%, transparent),
-    transparent 72%
-  );
-}
-
-.project-card:hover .project-card__spot {
-  opacity: 1;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .project-card__spot {
-    display: none;
-  }
-}
-
-@media print {
-  .custom-cursor,
-  .project-card__spot {
-    display: none !important;
-  }
-}
-
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;

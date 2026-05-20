@@ -56,7 +56,7 @@ export function Nav() {
           <span className="text-accent-deep animate-pulse">|</span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-5">
+        <div className="hidden md:flex items-center gap-8">
           <nav className="flex items-center gap-7">
             {NAV_LINKS.map((link) => {
               const isActive = active === link.id;
@@ -84,16 +84,6 @@ export function Nav() {
               );
             })}
           </nav>
-          <button
-            type="button"
-            onClick={() =>
-              window.dispatchEvent(new Event("toggle-command-palette"))
-            }
-            aria-label="Open command menu"
-            className="hidden lg:inline-flex items-center gap-1 border border-ink h-9 px-2.5 font-mono text-[10px] uppercase tracking-widest text-ink-soft hover:bg-ink hover:text-paper transition-colors"
-          >
-            <span className="text-sm leading-none">⌘</span>K
-          </button>
           <ThemeToggle />
         </div>
 
