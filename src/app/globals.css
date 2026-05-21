@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
 /*
+ * Explicit content config. Tailwind v4 automatic source detection
+ * scanned zero files in this project, producing a CSS bundle with no
+ * utility classes. The referenced config pins `content` to our source
+ * tree so every component is always scanned.
+ */
+@config "../../tailwind.config.ts";
+
+/*
  * Class-based dark variant. Apply by toggling `class="dark"` on <html>.
  * This overrides Tailwind 4's default media-query strategy so we control
  * theme switching from the UI.
