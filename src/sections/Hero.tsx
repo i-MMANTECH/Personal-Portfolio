@@ -1,5 +1,7 @@
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { ParallaxPhoto } from "@/components/ui/ParallaxPhoto";
+import { MouseTilt } from "@/components/ui/MouseTilt";
+import { HeroCanvasLazy } from "@/components/HeroCanvasLazy";
 import { profile } from "@/content/profile";
 
 /** Per-element entrance delay (ms) — applied once the preloader adds
@@ -14,9 +16,11 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex items-center min-h-[calc(100dvh-4rem)] px-6 sm:px-10 lg:px-16 py-20 sm:py-24 md:py-28"
+      className="relative flex items-center min-h-[calc(100dvh-4rem)] overflow-hidden px-6 sm:px-10 lg:px-16 py-20 sm:py-24 md:py-28"
     >
-      <div className="mx-auto w-full max-w-6xl grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 lg:gap-16 items-center">
+      <HeroCanvasLazy />
+      <MouseTilt className="relative z-10 mx-auto w-full max-w-6xl">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 lg:gap-16 items-center">
         <div
           className="hero-rise md:col-span-5 lg:col-span-4 order-1 md:order-2"
           style={delay(160)}
@@ -112,7 +116,8 @@ export function Hero() {
             </a>
           </div>
         </div>
-      </div>
+        </div>
+      </MouseTilt>
     </section>
   );
 }

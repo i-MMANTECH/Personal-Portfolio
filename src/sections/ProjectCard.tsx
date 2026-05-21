@@ -1,30 +1,57 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, type MouseEvent } from "react";
+import { useEffect, useRef, type MouseEvent } from "react";
 import type { Project } from "@/content/projects";
 
+const TILT_MAX = 6;
+
 /**
- * A single Featured Work card. A lime spotlight tracks the cursor
- * inside the card (CSS custom properties updated on mousemove), and
- * the whole card inverts on hover.
+ * A single Featured Work card. The cursor drives two effects at once:
+ * a lime spotlight (CSS custom properties) and a real 3D tilt toward
+ * the pointer. The whole card also inverts on hover. Tilt is disabled
+ * for reduced-motion users.
  */
 export function ProjectCard({ project }: { project: Project }) {
   const ref = useRef<HTMLElement | null>(null);
+  const tiltOff = useRef(false);
+
+  useEffect(() => {
+    tiltOff.current = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+  }, []);
 
   function handleMove(e: MouseEvent<HTMLElement>) {
     const node = ref.current;
     if (!node) return;
     const rect = node.getBoundingClientRect();
-    node.style.setProperty("--mx", `${e.clientX - rect.left}px`);
-    node.style.setProperty("--my", `${e.clientY - rect.top}px`);
+    const px = e.clientX - rect.left;
+    const py = e.clientY - rect.top;
+
+    // Spotlight follows the pointer.
+    node.style.setProperty("--mx", `${px}px`);
+    node.style.setProperty("--my", `${py}px`);
+
+    // 3D tilt toward the pointer.
+    if (!tiltOff.current) {
+      const rx = (py / rect.height - 0.5) * -TILT_MAX;
+      const ry = (px / rect.width - 0.5) * TILT_MAX;
+      node.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+    }
+  }
+
+  function handleLeave() {
+    const node = ref.current;
+    if (node) node.style.transform = "";
   }
 
   return (
     <article
       ref={ref}
       onMouseMove={handleMove}
-      className="project-card group relative flex h-full flex-col overflow-hidden border border-ink bg-paper text-ink transition-colors hover:bg-ink hover:text-paper"
+      onMouseLeave={handleLeave}
+      className="project-card group relative flex h-full flex-col overflow-hidden border border-ink bg-paper text-ink transition-[background-color,color,transform] duration-150 ease-out will-change-transform hover:bg-ink hover:text-paper"
     >
       <span aria-hidden className="project-card__spot" />
 
