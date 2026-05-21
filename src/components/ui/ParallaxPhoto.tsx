@@ -4,35 +4,37 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 /**
- * The hero portrait with a subtle scroll-linked parallax drift. The
- * image is scaled slightly larger than its frame so the drift never
- * exposes an edge. Disabled for reduced-motion users.
+ * The hero portrait. The frame's aspect ratio matches the source image
+ * exactly (1828x2560), so `object-cover` shows the *entire* photo with
+ * zero cropping. The scroll-linked parallax drifts the whole framed
+ * block — never the image inside the frame — so nothing is ever clipped.
+ * Disabled for reduced-motion users.
  */
 export function ParallaxPhoto() {
+  const outerRef = useRef<HTMLDivElement | null>(null);
   const innerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const node = innerRef.current;
-    if (!node) return;
+    const outer = outerRef.current;
+    const inner = innerRef.current;
+    if (!outer || !inner) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     let raf = 0;
 
     function update() {
       raf = 0;
-      const frame = node?.parentElement;
-      if (!frame || !node) return;
-      const rect = frame.getBoundingClientRect();
+      if (!outer || !inner) return;
+      const rect = outer.getBoundingClientRect();
       const viewportH = window.innerHeight || 1;
       const progress =
         (rect.top + rect.height / 2 - viewportH / 2) / viewportH;
-      const shift = Math.max(-28, Math.min(28, progress * -28));
-      node.style.transform = `translate3d(0, ${shift}px, 0)`;
+      const shift = Math.max(-20, Math.min(20, progress * -20));
+      inner.style.transform = `translate3d(0, ${shift}px, 0)`;
     }
 
     function onScroll() {
-      if (raf) return;
-      raf = requestAnimationFrame(update);
+      if (!raf) raf = requestAnimationFrame(update);
     }
 
     update();
@@ -47,22 +49,24 @@ export function ParallaxPhoto() {
   }, []);
 
   return (
-    <div className="relative aspect-square w-full max-w-sm md:max-w-none mx-auto border border-ink overflow-hidden bg-paper-mute">
-      <div ref={innerRef} className="absolute inset-0 will-change-transform">
-        <Image
-          src="/images/profile.jpg"
-          alt="Emmanuel Aro — profile portrait"
-          fill
-          priority
-          quality={95}
-          sizes="(max-width: 768px) 80vw, (max-width: 1280px) 33vw, 380px"
-          className="object-cover object-[center_28%] contrast-[1.04] saturate-[1.05] scale-[1.12]"
+    <div ref={outerRef} className="w-full max-w-sm md:max-w-none mx-auto">
+      <div ref={innerRef} className="relative will-change-transform">
+        <div className="relative aspect-1828/2560 w-full border border-ink overflow-hidden bg-paper-mute">
+          <Image
+            src="/images/profile.jpg"
+            alt="Emmanuel Aro — profile portrait"
+            fill
+            priority
+            quality={95}
+            sizes="(max-width: 768px) 80vw, (max-width: 1280px) 33vw, 400px"
+            className="object-cover contrast-[1.04] saturate-[1.05]"
+          />
+        </div>
+        <span
+          aria-hidden
+          className="absolute -bottom-px -right-px z-10 h-10 w-10 bg-accent border-l border-t border-ink"
         />
       </div>
-      <span
-        aria-hidden
-        className="absolute -bottom-px -right-px z-10 h-10 w-10 bg-accent border-l border-t border-ink"
-      />
     </div>
   );
 }

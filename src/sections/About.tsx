@@ -13,14 +13,14 @@ export function About() {
     >
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
         <div className="md:col-span-5 lg:col-span-4">
-          <div className="relative aspect-[4/5] w-full max-w-md mx-auto md:max-w-none border border-ink overflow-hidden bg-paper-mute">
+          <div className="relative aspect-1642/2560 w-full max-w-md mx-auto md:max-w-none border border-ink overflow-hidden bg-paper-mute">
             <Image
               src="/images/about.jpg"
               alt="Emmanuel Aro at work"
               fill
               quality={95}
-              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 380px"
-              className="object-cover object-[center_30%] contrast-[1.04] saturate-[1.05]"
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 400px"
+              className="object-cover contrast-[1.04] saturate-[1.05]"
             />
           </div>
         </div>
