@@ -104,7 +104,6 @@ const personSchema = {
   jobTitle: "Full Stack Software Engineer",
   description: SITE_DESCRIPTION,
   url: SITE_URL,
-  image: `${SITE_URL}/images/profile.jpg`,
   email: "emmanuelaro87@gmail.com",
   telephone: "+2349073318795",
   address: {
