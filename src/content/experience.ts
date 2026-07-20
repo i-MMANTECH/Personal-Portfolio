@@ -9,12 +9,24 @@ export type Role = {
 
 export const experience: readonly Role[] = [
   {
-    company: "Tech4mation (NativeTalk)",
-    title: "Software Developer, Platform Engineering",
-    period: "Feb 2026 — Present",
+    company: "Boxonia Blueprint",
+    title: "Software Engineer",
+    period: "Oct 2024 — Present",
     location: "Lagos, NG",
     current: true,
     bullets: [
+      "I built a centralized digital ecosystem in Python that consolidates story-development and talent-management for global film productions.",
+      "I shipped a talent-booking platform that removed cross-border coordination bottlenecks for high-profile international clients.",
+    ],
+  },
+  {
+    company: "Tech4mation (NativeTalk)",
+    title: "Software Developer, Platform Engineering",
+    period: "Feb 2026 — Jun 2026",
+    location: "Lagos, NG",
+    current: false,
+    bullets: [
+      "I collaborated closely with Product Managers and Product Engineers to ship innovative features, achieving a record-breaking delivery velocity that surpassed all previous engineering benchmarks within the company.",
       "I architected TaskForge Pro, a high-throughput team-management platform on Django Ninja + Next.js + PostgreSQL with strict typed API contracts.",
       "I hardened the security posture with JWT auth and a Postman endpoint-coverage regime that catches regressions before staging.",
       "I shipped core contributions to the omnichannel-crm service and refactored its backend logic for horizontal scalability.",
@@ -29,17 +41,6 @@ export const experience: readonly Role[] = [
     bullets: [
       "I architected Next.js UI layers for high-load applications, lifting frontend performance budgets and SEO posture.",
       "I re-modeled MySQL schemas and rewrote hot-path queries — I accelerated data retrieval by 20% under peak load.",
-    ],
-  },
-  {
-    company: "Boxonia Blueprint",
-    title: "Software Engineer",
-    period: "Oct 2024 — Present",
-    location: "Lagos, NG",
-    current: true,
-    bullets: [
-      "I built a centralized digital ecosystem in Python that consolidates story-development and talent-management for global film productions.",
-      "I shipped a talent-booking platform that removed cross-border coordination bottlenecks for high-profile international clients.",
     ],
   },
   {

@@ -34,5 +34,5 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/emmanuel-aro-8710972a9",
     x: "https://x.com/imman_tech1",
   },
-  cvPath: "/Emmanuel-Aro-The-Nerd-CV.pdf",
+  cvPath: "/Emmanuel-Aro-CV(Resume).pdf",
 } as const;
