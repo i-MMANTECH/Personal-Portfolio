@@ -37,7 +37,7 @@ export function About() {
           Nativetalk
         </span>
       ),
-      sub: "Software Developer, Platform Engineering",
+      sub: "Senior Software Developer, Platform Engineering",
     },
     {
       label: "Open to",

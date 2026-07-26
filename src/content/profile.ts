@@ -5,16 +5,16 @@ export type ProfileLink = {
 };
 
 export const profile = {
-  name: "Emmanuel Aro",
+  name: "Emmanuel Mobolaji Aro",
   identity: "Software Engineering Nerd",
-  role: "Full Stack Software Engineer",
+  role: "Senior Software Engineer",
   focus: ["Systems", "Platforms", "Applied AI"] as const,
-  location: "Lagos, Nigeria",
+  location: "Lagos, Nigeria (Open to Global Remote)",
   tagline:
-    "I'm a Software Engineering Nerd. I architect scalable, production-grade platforms at the intersection of web systems and applied machine learning.",
+    "I'm a Software Engineering Nerd. I architect high-throughput distributed systems, scalable backend platforms, and applied machine learning solutions.",
   bio: [
-    "I operate end-to-end as a Full Stack Software Engineer across the Python / Django Ninja and Next.js (App Router) / TypeScript ecosystems, with a working discipline built around strict typing, containerized delivery, and measurable system outcomes.",
-    "I care about defensible API surfaces, decoupled architecture, and infrastructure that holds under load. From shipping internal CRMs to retraining ML models on evolving threat data, the through-line is the same: I build systems, not features.",
+    "I operate end-to-end as a Senior Full Stack Software Engineer across the Python (Django/Django Ninja) and TypeScript (Next.js App Router) ecosystems, with a working discipline built around strict typing, automated CI/CD pipelines, containerized delivery, and measurable system outcomes.",
+    "I care about clean domain-driven design, defensible API surfaces, decoupled microservice architecture, and infrastructure that holds under demanding production workloads. From shipping enterprise team-management platforms to retraining ML models on evolving threat corpora, the through-line is the same: I build systems, not features.",
   ],
   meta: {
     experienceYears: "5+",

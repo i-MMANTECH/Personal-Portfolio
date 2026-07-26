@@ -11,35 +11,37 @@ import { ConsoleSignature } from "@/components/ConsoleSignature";
 import "./globals.css";
 
 const SITE_URL = "https://emmanuelaro.netlify.app";
-const SITE_NAME = "Emmanuel Aro — Software Engineering Nerd";
+const SITE_NAME = "Emmanuel Mobolaji Aro — Senior Software Engineer";
 const SITE_DESCRIPTION =
-  "Emmanuel Aro — Software Engineering Nerd and Full Stack Software Engineer in Lagos, Nigeria. I architect scalable, production-grade platforms and applied-AI systems across Django Ninja, Next.js, and TypeScript.";
+  "Emmanuel Mobolaji Aro — Senior Full Stack Software Engineer in Lagos, Nigeria (Open to Global Remote). Architecting high-throughput distributed systems, scalable platforms, and applied-AI solutions across Django Ninja, Next.js, and TypeScript.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: SITE_NAME,
-    template: "%s — Emmanuel Aro",
+    template: "%s — Emmanuel Mobolaji Aro",
   },
   description: SITE_DESCRIPTION,
-  applicationName: "Emmanuel Aro",
-  authors: [{ name: "Emmanuel Aro", url: SITE_URL }],
-  creator: "Emmanuel Aro",
-  publisher: "Emmanuel Aro",
+  applicationName: "Emmanuel Mobolaji Aro",
+  authors: [{ name: "Emmanuel Mobolaji Aro", url: SITE_URL }],
+  creator: "Emmanuel Mobolaji Aro",
+  publisher: "Emmanuel Mobolaji Aro",
   alternates: { canonical: "/" },
   category: "technology",
   keywords: [
+    "Emmanuel Mobolaji Aro",
     "Emmanuel Aro",
     "imman-tech",
     "imman_tech",
     "iMMAN-TECH",
     "iMMAN-Tech",
+    "Senior Software Engineer",
     "Software Engineering Nerd",
     "top software engineer Lagos",
     "best software engineer Nigeria",
     "software engineer Africa",
     "software engineer Lagos Nigeria",
-    "Full Stack Software Engineer Lagos",
+    "Senior Full Stack Engineer Lagos",
     "AI engineer Nigeria",
     "Machine Learning engineer Lagos",
     "Django Ninja developer",
@@ -51,7 +53,7 @@ export const metadata: Metadata = {
     title: SITE_NAME,
     description: SITE_DESCRIPTION,
     url: SITE_URL,
-    siteName: "Emmanuel Aro",
+    siteName: "Emmanuel Mobolaji Aro",
     locale: "en_US",
     type: "website",
   },
@@ -93,15 +95,16 @@ export const viewport: Viewport = {
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Emmanuel Aro",
+  name: "Emmanuel Mobolaji Aro",
   alternateName: [
+    "Emmanuel Aro",
     "imman-tech",
     "imman_tech",
     "iMMAN-TECH",
     "iMMAN-Tech",
     "Software Engineering Nerd",
   ],
-  jobTitle: "Full Stack Software Engineer",
+  jobTitle: "Senior Full Stack Software Engineer",
   description: SITE_DESCRIPTION,
   url: SITE_URL,
   email: "emmanuelaro87@gmail.com",

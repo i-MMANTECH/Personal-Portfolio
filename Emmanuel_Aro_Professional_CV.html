@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmanuel Mobolaji Aro - Senior Software Engineer CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #334155;
+            --accent-color: #2563eb;
+            --light-gray: #f1f5f9;
+            --border-color: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--primary-color);
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background-color: #e2e8f0;
+            font-size: 10pt;
+        }
+
+        .page {
+            max-width: 21cm;
+            min-height: 29.7cm;
+            margin: 2rem auto;
+            background: white;
+            padding: 2.2cm 2.5cm;
+            box-sizing: border-box;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+        }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 1.5cm;
+            }
+            body {
+                background-color: white;
+                font-size: 10pt;
+                line-height: 1.5;
+            }
+            .page {
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+                width: 100%;
+                max-width: none;
+                min-height: auto;
+            }
+            .job-block, .project-item, .skills-grid {
+                page-break-inside: avoid;
+            }
+            h2 {
+                page-break-after: avoid;
+            }
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 14px;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 24pt;
+            margin: 0 0 6px 0;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--primary-color);
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 11pt;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-info {
+            font-size: 9.5pt;
+            color: var(--secondary-color);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 14px;
+            font-weight: 500;
+        }
+
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 12pt;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 4px;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 11pt;
+            margin: 0;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            color: var(--primary-color);
+        }
+
+        .job-block {
+            margin-bottom: 16px;
+        }
+
+        .job-title {
+            font-weight: 500;
+            font-style: italic;
+            color: var(--accent-color);
+            font-size: 10pt;
+            margin-top: 2px;
+            margin-bottom: 6px;
+        }
+
+        .date-location {
+            font-size: 9.5pt;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        p {
+            margin: 0 0 8px 0;
+            text-align: justify;
+            color: var(--secondary-color);
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 18px;
+            color: var(--secondary-color);
+        }
+
+        li {
+            margin-bottom: 4px;
+            padding-left: 2px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 8px 14px;
+            margin-bottom: 16px;
+            background: var(--light-gray);
+            padding: 12px 16px;
+            border-radius: 6px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .skill-category {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 10pt;
+        }
+
+        .skill-list {
+            color: var(--secondary-color);
+            font-size: 10pt;
+        }
+
+        .project-item {
+            margin-bottom: 14px;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .project-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 10.5pt;
+        }
+
+        .project-tags {
+            font-size: 8.5pt;
+            color: var(--accent-color);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            background: #eff6ff;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .education-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 10pt;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>EMMANUEL MOBOLAJI ARO</h1>
+            <div class="subtitle">SENIOR SOFTWARE ENGINEER &middot; SYSTEMS &amp; PLATFORM ARCHITECTURE &middot; APPLIED AI</div>
+            
+            <div class="contact-info">
+                <span>Lagos, Nigeria (Open to Global Remote / Relocation)</span> &bull;
+                <span>+234 907 331 8795</span> &bull;
+                <a href="mailto:emmanuelaro87@gmail.com">emmanuelaro87@gmail.com</a> &bull;
+                <a href="https://www.linkedin.com/in/emmanuel-aro-8710972a9" target="_blank">LinkedIn</a> &bull;
+                <a href="https://github.com/i-MMANTECH" target="_blank">GitHub</a> &bull;
+                <a href="https://emmanuelaro.netlify.app/" target="_blank">Portfolio</a>
+            </div>
+        </header>
+
+        <h2>EXECUTIVE PROFILE</h2>
+        <p>Results-driven Senior Full Stack Software Engineer with expertise in architecting high-throughput distributed systems, scalable backend platforms, and applied machine learning solutions. Master of the Python (Django/Django Ninja) and TypeScript (Next.js App Router) ecosystems, with a track record of leading cross-functional engineering teams to ship world-class, production-grade platforms. Strongly oriented around clean domain-driven design, defensible API contracts, strict typing, automated CI/CD pipelines, and cloud-native containerized infrastructures that maintain sub-second latency and high availability under demanding production workloads.</p>
+
+        <h2>TECHNICAL EXPERTISE</h2>
+        <div class="skills-grid">
+            <div class="skill-category">Core Languages</div>
+            <div class="skill-list">Python, TypeScript, JavaScript (ES6+), SQL, PHP, Bash / Shell Scripting</div>
+            
+            <div class="skill-category">Backend &amp; Cloud Architecture</div>
+            <div class="skill-list">Django Ninja, Django, Node.js, RESTful APIs, GraphQL, Microservices, JWT/OAuth2 Auth, Event-Driven Systems</div>
+            
+            <div class="skill-category">Frontend &amp; UI Engineering</div>
+            <div class="skill-list">Next.js (App Router), React, Tailwind CSS, Server Components (RSC), State Management, Web Performance / SEO</div>
+            
+            <div class="skill-category">Data Engineering &amp; Storage</div>
+            <div class="skill-list">PostgreSQL, MySQL, SQLite, Supabase, Redis, Schema Modeling, Query Optimization, ORMs &amp; Migrations</div>
+            
+            <div class="skill-category">DevOps &amp; Cloud Infra</div>
+            <div class="skill-list">Docker, AWS (EC2, S3, RDS, IAM), CI/CD Pipelines (GitHub Actions), Linux Administration, Nginx, Postman</div>
+            
+            <div class="skill-category">Applied AI &amp; Machine Learning</div>
+            <div class="skill-list">Scikit-learn, TensorFlow, Pandas, NumPy, OpenCV, NLP Pipelines, Predictive Modeling, LLM API Integrations</div>
+            
+            <div class="skill-category">Engineering Leadership</div>
+            <div class="skill-list">System Architecture Design, API Contract Design, Security Hardening, Agile/Scrum Leadership, Code Review &amp; Mentorship</div>
+        </div>
+
+        <h2>PROFESSIONAL EXPERIENCE</h2>
+        
+        <div class="job-block">
+            <h3>
+                <span>Boxonia Blueprint</span>
+                <span class="date-location">Oct 2024 &ndash; Present | Lagos, NG</span>
+            </h3>
+            <div class="job-title">Software Engineer (Platform &amp; Ecosystem Architecture)</div>
+            <ul>
+                <li>Architected and developed a centralized digital ecosystem in Python that consolidates story-development and talent-management workflows across 5+ globally distributed film production teams.</li>
+                <li>Engineered an automated talent-booking and cross-border coordination platform, replacing multi-day manual scheduling loops with a zero-friction transactional flow that accelerated client onboarding velocity by 40%.</li>
+                <li>Designed scalable relational schemas and secure RESTful API integrations, ensuring high-availability data synchronization between distributed production units under strict SLA requirements.</li>
+            </ul>
+        </div>
+
+        <div class="job-block">
+            <h3>
+                <span>Tech4mation (NativeTalk)</span>
+                <span class="date-location">Feb 2026 &ndash; Jun 2026 | Lagos, NG</span>
+            </h3>
+            <div class="job-title">Senior Software Developer, Platform Engineering</div>
+            <ul>
+                <li>Spearheaded backend architecture and feature delivery across core enterprise products, collaborating closely with Product and Engineering leadership to establish record-breaking sprint delivery velocity within the company.</li>
+                <li>Architected <strong>TaskForge Pro</strong>, a high-throughput enterprise team-management platform powered by Django Ninja, Next.js (App Router), and PostgreSQL, utilizing a decoupled microservice boundary and strict typed API contracts.</li>
+                <li>Hardened platform security posture by implementing robust JWT authentication, role-based access control (RBAC), and automated Postman API regression test suites, achieving 99.9% endpoint reliability prior to staging promotion.</li>
+                <li>Refactored core messaging pipelines and backend logic in the <em>omnichannel-crm</em> service, decoupling channel adapters from core processing loops to support horizontal scaling under surge traffic.</li>
+                <li>Standardized engineering environments by introducing containerized Docker workflows, eliminating environment drift and reducing onboarding time for new engineers from 3 days to under 2 hours.</li>
+            </ul>
+        </div>
+
+        <div class="job-block">
+            <h3>
+                <span>Bincom Dev Center</span>
+                <span class="date-location">Sep 2025 &ndash; Jan 2026 | Lagos, NG</span>
+            </h3>
+            <div class="job-title">Full Stack Developer</div>
+            <ul>
+                <li>Architected high-performance frontend interfaces using Next.js (App Router) and React, leveraging Server Components and optimized data-fetching patterns to reduce First Contentful Paint (FCP) by 35% and boost SEO rankings.</li>
+                <li>Overhauled relational MySQL database schemas and refactored hot-path SQL queries, accelerating complex data retrieval by 20% and eliminating latency spikes under peak user load.</li>
+                <li>Mentored junior developers in TypeScript best practices, modular component design, and git branching standards, elevating overall team code quality and delivery velocity.</li>
+            </ul>
+        </div>
+
+        <div class="job-block">
+            <h3>
+                <span>Cyberbuddies.com</span>
+                <span class="date-location">Apr 2024 &ndash; Aug 2024 | Ibadan, NG</span>
+            </h3>
+            <div class="job-title">Full Stack Developer</div>
+            <ul>
+                <li>Delivered end-to-end full-stack web applications from initial system design to production deployment, introducing continuous integration and automated testing pipelines that increased delivery velocity by 25%.</li>
+                <li>Spearheaded the migration of production workloads to AWS cloud infrastructure, optimizing compute and storage resource allocation to reduce cloud operating costs by 18% while upholding 99.9% uptime SLA targets.</li>
+            </ul>
+        </div>
+
+        <div class="job-block">
+            <h3>
+                <span>SafeSpace.org Association</span>
+                <span class="date-location">May 2023 &ndash; Feb 2024 | California, US (Remote)</span>
+            </h3>
+            <div class="job-title">Operations QA &amp; Automation Engineer</div>
+            <ul>
+                <li>Designed and deployed Python and Django automated review pipelines that replaced manual verification loops, increasing organizational operational throughput by 30% with complete deterministic auditability.</li>
+                <li>Instituted rigorous data quality and automated testing protocols in containerized Docker environments, reducing data-entry error rates by 50% and establishing company-wide benchmarks for system integrity.</li>
+            </ul>
+        </div>
+
+        <div class="job-block">
+            <h3>
+                <span>Fiatci.io</span>
+                <span class="date-location">Sep 2022 &ndash; Mar 2023 | Brussels, BE (Remote)</span>
+            </h3>
+            <div class="job-title">Lead Full Stack Engineer</div>
+            <ul>
+                <li>Led a cross-functional engineering team of 7 developers through the end-to-end architecture, development, and production deployment of the company's flagship web platform &mdash; delivering the first successful commercial product launch in company history.</li>
+                <li>Owned technical direction across frontend, backend, and DevOps infrastructure; established rigorous code review standards, CI/CD release strategies, and zero-downtime production cutover protocols.</li>
+            </ul>
+        </div>
+
+        <h2>APPLIED AI &amp; MACHINE LEARNING SYSTEMS</h2>
+        
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-title">Enterprise Malware Detection &amp; Classification Engine</span>
+                <span class="project-tags">PYTHON &middot; SCIKIT-LEARN &middot; PREDICTIVE SECURITY ML</span>
+            </div>
+            <p>Designed and deployed a Python-based security analytics platform applying supervised machine learning to real-time endpoint malware classification. Structured with automated feature extraction and retraining pipelines for evolving threat corpora.</p>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-title">Real-Time Computer Vision Attendance Platform</span>
+                <span class="project-tags">PHP &middot; JAVASCRIPT &middot; OPENCV &middot; RELATIONAL STORE</span>
+            </div>
+            <p>Engineered a high-speed biometric attendance system integrating webcam image streaming with OpenCV computer-vision pipelines. Automated real-time facial capture, normalization, and identification against a secured relational store.</p>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-title">Clinical Oncology Risk Prediction Model</span>
+                <span class="project-tags">SCIKIT-LEARN &middot; PANDAS &middot; EXPLAINABLE AI (XAI)</span>
+            </div>
+            <p>Developed an explainable, high-accuracy diagnostic classification model trained on clinical patient datasets for proactive risk assessment. Emphasizes reproducible feature engineering and interpretable outputs for clinical decision support.</p>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-title">NLP Misinformation &amp; Named Entity Extraction Engine</span>
+                <span class="project-tags">NLP &middot; TOKENIZATION &middot; INFORMATION RETRIEVAL</span>
+            </div>
+            <p>Shipped end-to-end NLP pipelines in Python leveraging statistical embeddings and tokenization primitives to categorize unstructured text, extract critical named entities (NER), and detect disinformation in high-noise social data streams.</p>
+        </div>
+
+        <h2>EDUCATION &amp; CERTIFICATIONS</h2>
+        
+        <div class="education-item">
+            <span><strong>B.Sc. in Computer Science</strong> &mdash; Federal University Oye-Ekiti, Nigeria</span>
+            <span><strong>2025</strong></span>
+        </div>
+        <div class="education-item">
+            <span><strong>Advanced Software Engineering Certification</strong> &mdash; GB-Tech Learning Centre, Nigeria</span>
+            <span><strong>2023</strong></span>
+        </div>
+    </div>
+</body>
+</html>

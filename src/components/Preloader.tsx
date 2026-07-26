@@ -81,8 +81,8 @@ export function Preloader() {
       )}
     >
       <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.4em] text-paper/45">
-        Emmanuel Aro
-        <span className="text-accent"> / Software Engineering Nerd</span>
+        Emmanuel Mobolaji Aro
+        <span className="text-accent"> / Senior Software Engineer</span>
       </span>
       <span className="font-mono text-[22vw] sm:text-[14vw] leading-[0.8] font-bold tabular-nums">
         {String(count).padStart(3, "0")}

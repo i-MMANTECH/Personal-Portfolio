@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Nativetalk Ticketing — Case Study",
   description:
-    "Case study: how Emmanuel Aro designed and built the Nativetalk Ticketing dashboard — a typed, role-based support-operations surface on Next.js and TypeScript.",
+    "Case study: how Emmanuel Mobolaji Aro designed and built the Nativetalk Ticketing dashboard — a typed, role-based support-operations surface on Next.js and TypeScript.",
   alternates: { canonical: "/work/nativetalk-ticketing" },
 };
 

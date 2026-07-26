@@ -13,10 +13,10 @@ export function ConsoleSignature() {
     const link =
       "color:#0b0b0c;background:#a6f500;font:700 12px monospace;padding:2px 6px";
 
-    console.log("%c// EMMANUEL ARO — SOFTWARE ENGINEERING NERD", heading);
+    console.log("%c// EMMANUEL MOBOLAJI ARO — SENIOR SOFTWARE ENGINEER", heading);
     console.log(
       "%cYou opened the console. Respect — that's the engineer move.\n" +
-        "I build systems, not features. If your team needs that, let's talk.",
+        "I architect high-throughput systems, not features. If your team needs that, let's talk.",
       body,
     );
     console.log("%c emmanuelaro87@gmail.com ", link);

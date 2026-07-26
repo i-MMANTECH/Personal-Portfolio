@@ -15,7 +15,7 @@ const SPEC_ROWS = [
   { key: "Stack", value: "Django Ninja · Next.js · TS" },
   { key: "Now", value: "TaskForge Pro · Nativetalk" },
   { key: "Open to", value: "Senior engineering roles" },
-  { key: "Based", value: "Lagos, Nigeria" },
+  { key: "Based", value: "Lagos, NG (Global Remote)" },
 ] as const;
 
 export function Hero() {
