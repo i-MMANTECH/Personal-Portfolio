@@ -1,9 +1,9 @@
 import { Reveal } from "./ui/Reveal";
 
 const ITEMS = [
-  { label: "Shipping", value: "TaskForge Pro" },
-  { label: "Researching", value: "Endpoint Security ML" },
-  { label: "Open to", value: "Senior roles" },
+  { label: "Shipping", value: "Geod AI" },
+  { label: "Building", value: "Rosendahl @ LunarTech" },
+  { label: "Open to", value: "Senior / Staff roles" },
 ] as const;
 
 export function CurrentlyStrip() {

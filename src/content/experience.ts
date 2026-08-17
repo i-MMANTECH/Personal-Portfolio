@@ -9,6 +9,20 @@ export type Role = {
 
 export const experience: readonly Role[] = [
   {
+    company: "LunarTech",
+    title: "Software Engineer — AI Systems & Platform Engineering (Apprenticeship)",
+    period: "May 2026 — Present",
+    location: "Austin, TX, US (Remote)",
+    current: true,
+    bullets: [
+      "Contributed to Rosendahl, LunarTech's flagship legal AI platform — a self-hosted agentic workspace engineered as 'Claude Code for law' — building backend services and Agentic RAG pipelines (LlamaIndex / LangGraph) that structure legal cases with fully evidence-linked, formally verified outputs across 121+ active ECHR case workspaces.",
+      "Designed legal document processing APIs using LexNLP and Blackstone (spaCy) for automated named-entity extraction, citation parsing, and admissibility-risk scoring; enforced a four-tier confidential AI model routing strategy (OpenRouter / Claude / Ollama local) ensuring privileged legal evidence never exits the local inference lane.",
+      "Delivered Dark Phoenix, LunarTech's AI podcast video clipper — engineering the end-to-end GPU pipeline on Modal (TalkNet active-speaker detection → WhisperX transcription → Gemini moment selection → ffmpeg clip render), YouTube ingestion, provider-agnostic S3 storage (Backblaze B2), and a branded watermark burned directly into exported MP4s.",
+      "Resolved 8 critical production deployment failures spanning Modal GPU image builds, WhisperX/setuptools dependency conflicts, scenedetect version pinning, and Next.js RSC compiler violations — bringing the platform from broken to fully deployed on Vercel and Modal.",
+      "Worked extensively with the local LLM stack — Ollama, LangChain, LangGraph, and open-weight models (Qwen3, Llama, DeepSeek) — to support privacy-first, self-hosted inference across LunarTech's AI-native product suite.",
+    ],
+  },
+  {
     company: "Boxonia Blueprint",
     title: "Software Engineer (Platform & Ecosystem Architecture)",
     period: "Oct 2024 — Present",

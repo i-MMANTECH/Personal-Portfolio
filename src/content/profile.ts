@@ -8,13 +8,13 @@ export const profile = {
   name: "Emmanuel Mobolaji Aro",
   identity: "Software Engineering Nerd",
   role: "Senior Software Engineer",
-  focus: ["Systems", "Platforms", "Applied AI"] as const,
+  focus: ["Systems", "Platforms", "Applied AI", "LLMs"] as const,
   location: "Lagos, Nigeria (Open to Global Remote)",
   tagline:
     "I'm a Software Engineering Nerd. I architect high-throughput distributed systems, scalable backend platforms, and applied machine learning solutions.",
   bio: [
-    "I operate end-to-end as a Senior Full Stack Software Engineer across the Python (Django/Django Ninja) and TypeScript (Next.js App Router) ecosystems, with a working discipline built around strict typing, automated CI/CD pipelines, containerized delivery, and measurable system outcomes.",
-    "I care about clean domain-driven design, defensible API surfaces, decoupled microservice architecture, and infrastructure that holds under demanding production workloads. From shipping enterprise team-management platforms to retraining ML models on evolving threat corpora, the through-line is the same: I build systems, not features.",
+    "I operate end-to-end as a Senior Full Stack Software Engineer across the Python (Django/Django Ninja) and TypeScript (Next.js App Router) ecosystems. Currently engineering AI systems at LunarTech — building Agentic RAG pipelines, legal document processing APIs, and LLM routing infrastructure — while independently shipping Geod AI, my own sovereign AI workspace product.",
+    "I care about clean domain-driven design, defensible API surfaces, and infrastructure that holds under demanding production workloads. Whether it's a 9-layer self-hosted legal AI stack, a GPU video processing pipeline on Modal, or a real-time WebRTC collaboration platform — the through-line is always the same: I build systems, not features.",
   ],
   meta: {
     experienceYears: "5+",

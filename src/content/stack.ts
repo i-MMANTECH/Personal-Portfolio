@@ -53,4 +53,18 @@ export const stack: readonly StackGroup[] = [
       "Malware Analysis",
     ],
   },
+  {
+    id: "llm",
+    label: "LLMs & Agentic AI",
+    items: [
+      "LangChain",
+      "LlamaIndex",
+      "LangGraph",
+      "Ollama (Local LLMs)",
+      "Agentic RAG",
+      "OpenRouter",
+      "Gemini AI",
+      "WhisperX",
+    ],
+  },
 ] as const;

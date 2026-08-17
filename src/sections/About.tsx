@@ -32,12 +32,12 @@ export function About() {
       label: "Currently",
       headline: (
         <span className="font-mono text-base md:text-lg font-bold text-ink leading-tight">
-          Tech4mation
-          <span className="text-ink-mute"> · </span>
-          Nativetalk
+          LunarTech
+          <span className="text-accent-deep"> · </span>
+          Geod AI
         </span>
       ),
-      sub: "Senior Software Developer, Platform Engineering",
+      sub: "Software Engineer, AI Systems & Platform Eng.",
     },
     {
       label: "Open to",

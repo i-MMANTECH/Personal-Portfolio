@@ -15,6 +15,41 @@ export type Project = {
 
 export const projects: readonly Project[] = [
   {
+    id: "geod-ai",
+    title: "Geod — Sovereign AI Workspace",
+    category: "AI/ML",
+    year: "2026",
+    description:
+      "Architected and shipped Geod — a sovereign AI workspace that unifies real-time team collaboration (channels, DMs, huddles) with one-click access to every frontier AI model. Built four proprietary AI engines (Quantum, Deep Reasoner, Cognitive Synthesis, Neural Vision), an autonomous sandboxed code runtime, and a multi-modal OCR pipeline. Zero vendor lock-in by design.",
+    tech: ["Next.js", "TypeScript", "Neon SQL", "Upstash Redis", "LiveKit", "LLMs", "WebRTC"],
+    links: {
+      live: "https://geod-psi.vercel.app/",
+      code: "https://github.com/i-MMANTECH/geod",
+    },
+  },
+  {
+    id: "rosendahl-legal-ai",
+    title: "Rosendahl — Legal AI Platform (LunarTech)",
+    category: "AI/ML",
+    year: "2026",
+    description:
+      "Engineered backend services and Agentic RAG pipelines for Rosendahl, LunarTech's self-hosted legal AI platform — a 'Claude Code for law' operating environment that structures ECHR legal cases like codebases. Built legal document processing APIs (LexNLP, Blackstone/spaCy) for named-entity extraction, citation parsing, and admissibility-risk scoring. Enforced a four-tier confidential AI model routing strategy (OpenRouter / Claude / Ollama local) across 121+ active case workspaces.",
+    tech: ["Python", "LLMs", "Agentic RAG", "LangGraph", "LlamaIndex", "Ollama", "Next.js", "PostgreSQL", "Docker"],
+    links: {},
+  },
+  {
+    id: "dark-phoenix-podcast-clipper",
+    title: "Dark Phoenix — AI Podcast Clipper (LunarTech)",
+    category: "AI/ML",
+    year: "2026",
+    description:
+      "Delivered LunarTech's AI podcast video clipper end-to-end: engineered the full GPU processing pipeline on Modal (TalkNet active-speaker detection → WhisperX transcription → Gemini AI moment selection → ffmpeg clip render), YouTube ingestion via yt-dlp, provider-agnostic S3 object storage (Backblaze B2), and a branded watermark burned directly into exported MP4s. Resolved 8 critical production deployment failures across Modal, WhisperX, Vercel, and Next.js to bring the platform from broken to fully shipped.",
+    tech: ["Python", "Modal (GPU)", "WhisperX", "TalkNet", "Gemini AI", "Next.js", "Supabase", "ffmpeg", "AWS S3"],
+    links: {
+      live: "https://dark-phoenix-77.vercel.app/",
+    },
+  },
+  {
     id: "nativetalk-ticketing",
     title: "Nativetalk Support Operations Dashboard",
     category: "Web",

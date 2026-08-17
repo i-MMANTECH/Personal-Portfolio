@@ -13,7 +13,7 @@ const SPEC_ROWS = [
   { key: "Repos", value: "65+ public" },
   { key: "Years", value: "5+ in stack" },
   { key: "Stack", value: "Django Ninja · Next.js · TS" },
-  { key: "Now", value: "TaskForge Pro · Nativetalk" },
+  { key: "Now", value: "Geod AI · LunarTech" },
   { key: "Open to", value: "Senior engineering roles" },
   { key: "Based", value: "Lagos, NG (Global Remote)" },
 ] as const;
