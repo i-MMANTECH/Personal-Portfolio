@@ -11,7 +11,7 @@ export const profile = {
   focus: ["Systems", "Platforms", "Applied AI", "LLMs"] as const,
   location: "Lagos, Nigeria (Open to Global Remote)",
   tagline:
-    "I don't just build features — I architect systems. Senior Full Stack Engineer shipping distributed platforms, Agentic AI pipelines, and production-grade infrastructure that holds under load.",
+    "I don't just build features — I architect systems. Senior Full Stack Engineer shipping distributed platforms, Agentic AI pipelines, and production-grade infrastructure that holds under load. At my core, I'm simply a problem-solving nerd driven by innovation — deeply passionate about my craft and absolutely in love with what I do.",
 
   /**
    * Philosophy lines — used in the Manifesto section.
