@@ -1,12 +1,14 @@
 const ITEMS: readonly string[] = [
-  "Currently shipping → TaskForge Pro",
-  "Now in production → Nativetalk Ticketing",
-  "Currently shipping → Boxonia Blueprint",
-  "Researching → Endpoint security ML",
-  "Researching → NLP pipelines",
-  "Open to → Senior engineering roles",
-  "Based in → Lagos, Nigeria",
-  "Stack → Django Ninja · Next.js · TypeScript · PostgreSQL · Docker",
+  "Currently building → Geod AI — Sovereign AI Workspace",
+  "Now in production → Rosendahl @ LunarTech",
+  "Shipped → Dark Phoenix GPU Pipeline",
+  "6+ years → Senior Full Stack Engineer",
+  "Open to → Senior / Staff / Principal roles",
+  "Based in → Lagos, NG · Remote-first · Global talent",
+  "Stack → Django Ninja · Next.js · LangGraph · LlamaIndex · PostgreSQL",
+  "65+ public repos → github.com/i-MMANTECH",
+  "4 continents → Remote engineering experience",
+  "99.9% uptime → Production SLA track record",
 ];
 
 export function Marquee() {
@@ -15,7 +17,7 @@ export function Marquee() {
   return (
     <aside
       role="marquee"
-      aria-label="Currently shipping, researching, and open to roles"
+      aria-label="Currently shipping, building, and open to roles"
       className="relative overflow-hidden border-t border-b border-ink bg-paper-soft py-4 sm:py-5"
     >
       <div className="flex whitespace-nowrap animate-marquee will-change-transform">

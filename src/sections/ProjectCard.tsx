@@ -11,8 +11,16 @@ const TILT_MAX = 6;
  * a lime spotlight (CSS custom properties) and a real 3D tilt toward
  * the pointer. The whole card also inverts on hover. Tilt is disabled
  * for reduced-motion users.
+ *
+ * `featured` flag adds a "FEATURED" badge on top 3 AI/ML projects.
  */
-export function ProjectCard({ project }: { project: Project }) {
+export function ProjectCard({
+  project,
+  featured = false,
+}: {
+  project: Project;
+  featured?: boolean;
+}) {
   const ref = useRef<HTMLElement | null>(null);
   const tiltOff = useRef(false);
 
@@ -51,7 +59,7 @@ export function ProjectCard({ project }: { project: Project }) {
       ref={ref}
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
-      className="project-card group relative flex h-full flex-col overflow-hidden border border-ink bg-paper text-ink transition-[background-color,color,transform] duration-150 ease-out will-change-transform hover:bg-ink hover:text-paper"
+      className="project-card group relative flex h-full flex-col overflow-hidden border border-ink bg-paper text-ink transition-[background-color,color,transform] duration-200 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] will-change-transform hover:bg-ink hover:text-paper"
     >
       <span aria-hidden className="project-card__spot" />
 
@@ -59,6 +67,13 @@ export function ProjectCard({ project }: { project: Project }) {
         <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-deep transition-colors group-hover:text-accent">
           {project.category} · {project.year}
         </span>
+
+        {/* Featured badge */}
+        {featured && (
+          <span className="font-mono text-[9px] uppercase tracking-[0.25em] bg-accent text-ink px-2 py-0.5">
+            Featured
+          </span>
+        )}
       </header>
 
       <div className="relative flex flex-1 flex-col px-5 py-6">

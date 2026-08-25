@@ -11,13 +11,40 @@ export const profile = {
   focus: ["Systems", "Platforms", "Applied AI", "LLMs"] as const,
   location: "Lagos, Nigeria (Open to Global Remote)",
   tagline:
-    "I'm a Software Engineering Nerd. I architect high-throughput distributed systems, scalable backend platforms, and applied machine learning solutions.",
+    "I don't just build features — I architect systems. Senior Full Stack Engineer shipping distributed platforms, Agentic AI pipelines, and production-grade infrastructure that holds under load.",
+
+  /**
+   * Philosophy lines — used in the Manifesto section.
+   * Bold, confident, non-generic.
+   */
+  manifesto: [
+    "I build systems, not features. Every line of code I write is a decision about architecture, scale, and ownership.",
+    "The through-line across everything I've shipped — legal AI, GPU pipelines, enterprise platforms — is the same: clean domain-driven design, defensible API surfaces, and infrastructure that holds under demanding production workloads.",
+    "Six years in. Seven companies. Four continents. Still the most curious person in the room.",
+  ] as const,
+
+  /**
+   * Quantified achievements — power the StatsBar and About counters.
+   */
+  achievements: {
+    repos: 65,
+    companies: 7,
+    yearsExperience: 6,
+    continents: 4,
+    systemsShipped: 12,
+    uptimeSLA: "99.9%",
+    productionBugsSquashed: 8,
+  },
+
+  /**
+   * Quantified achievements shown in bio and meta.
+   */
   bio: [
     "I operate end-to-end as a Senior Full Stack Software Engineer across the Python (Django/Django Ninja) and TypeScript (Next.js App Router) ecosystems. Currently engineering AI systems at LunarTech — building Agentic RAG pipelines, legal document processing APIs, and LLM routing infrastructure — while independently shipping Geod AI, my own sovereign AI workspace product.",
     "I care about clean domain-driven design, defensible API surfaces, and infrastructure that holds under demanding production workloads. Whether it's a 9-layer self-hosted legal AI stack, a GPU video processing pipeline on Modal, or a real-time WebRTC collaboration platform — the through-line is always the same: I build systems, not features.",
   ],
   meta: {
-    experienceYears: "5+",
+    experienceYears: "6+",
     educationPrimary: "B.Sc. Computer Science",
     educationSecondary: "Federal University Oye-Ekiti",
     certification: "Software Engineering Certification",
@@ -34,5 +61,5 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/emmanuel-aro-8710972a9",
     x: "https://x.com/imman_tech1",
   },
-  cvPath: "/Emmanuel-Aro-CV(Resume).pdf",
+  cvPath: "/Emmanuel_Aro_CV.pdf",
 } as const;

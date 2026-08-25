@@ -11,9 +11,9 @@ import { ConsoleSignature } from "@/components/ConsoleSignature";
 import "./globals.css";
 
 const SITE_URL = "https://emmanuelaro.netlify.app";
-const SITE_NAME = "Emmanuel Mobolaji Aro — Senior Software Engineer";
+const SITE_NAME = "Emmanuel Mobolaji Aro — Senior Software Engineer · Global Talent";
 const SITE_DESCRIPTION =
-  "Emmanuel Mobolaji Aro — Senior Full Stack Software Engineer in Lagos, Nigeria (Open to Global Remote). Architecting high-throughput distributed systems, scalable platforms, and applied-AI solutions across Django Ninja, Next.js, and TypeScript.";
+  "Emmanuel Mobolaji Aro — Senior Full Stack Software Engineer based in Lagos, Nigeria (Open to Global Remote). Architecting Agentic AI systems, distributed platforms, and applied-ML solutions at LunarTech. 6+ years. 65+ repos. 4 continents. Django Ninja · Next.js · TypeScript · LangGraph · LlamaIndex.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -29,25 +29,62 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   category: "technology",
   keywords: [
+    // Primary identity
     "Emmanuel Mobolaji Aro",
     "Emmanuel Aro",
     "imman-tech",
     "imman_tech",
     "iMMAN-TECH",
     "iMMAN-Tech",
-    "Senior Software Engineer",
+    "Emmanuel Aro portfolio",
+    "Emmanuel Aro software engineer",
+    // Role + location signals
+    "Senior Software Engineer Lagos Nigeria",
+    "Senior Full Stack Engineer Africa",
     "Software Engineering Nerd",
     "top software engineer Lagos",
     "best software engineer Nigeria",
-    "software engineer Africa",
+    "top software engineer Africa",
+    "best software engineer Africa",
+    "software engineer Nigeria 2026",
     "software engineer Lagos Nigeria",
     "Senior Full Stack Engineer Lagos",
+    "global software engineer Nigeria",
+    "promising software engineer Africa",
+    "software engineer open to remote",
+    // AI / ML
     "AI engineer Nigeria",
+    "Agentic AI engineer",
+    "Agentic RAG engineer",
+    "LangGraph developer",
+    "LlamaIndex engineer",
+    "LLM engineer Nigeria",
     "Machine Learning engineer Lagos",
+    "Applied AI engineer Africa",
+    "legal AI engineer",
+    // Stack-specific
     "Django Ninja developer",
+    "Django Ninja expert",
     "Next.js developer Nigeria",
+    "Next.js App Router engineer",
     "TypeScript engineer Africa",
     "React developer Lagos",
+    "Python backend engineer Nigeria",
+    "full stack TypeScript Python engineer",
+    // Company / project signals
+    "LunarTech engineer",
+    "Geod AI",
+    "Rosendahl legal AI",
+    "Dark Phoenix podcast clipper",
+    // GitHub / OSS
+    "i-MMANTECH GitHub",
+    "imman_tech GitHub",
+    "Emmanuel Aro GitHub",
+    // Broader discovery
+    "distributed systems engineer Nigeria",
+    "backend platform engineer Africa",
+    "senior engineer remote Lagos",
+    "software architect Nigeria",
   ],
   openGraph: {
     title: SITE_NAME,
@@ -88,9 +125,9 @@ export const viewport: Viewport = {
 
 /**
  * Person structured data (JSON-LD) — tells search engines exactly who
- * this is: a software engineer, in Lagos, Nigeria, with these aliases
- * and profiles. The highest-leverage technical SEO signal for ranking
- * on name + role + location queries.
+ * this is: a world-class software engineer based in Lagos, Nigeria,
+ * open to global remote. Richest possible entity graph for name +
+ * role + location searches.
  */
 const personSchema = {
   "@context": "https://schema.org",
@@ -109,6 +146,7 @@ const personSchema = {
   url: SITE_URL,
   email: "emmanuelaro87@gmail.com",
   telephone: "+2349073318795",
+  image: `${SITE_URL}/images/emmanuel_111.jpg`,
   address: {
     "@type": "PostalAddress",
     addressLocality: "Lagos",
@@ -116,9 +154,35 @@ const personSchema = {
     addressCountry: "Nigeria",
   },
   nationality: { "@type": "Country", name: "Nigeria" },
+  hasOccupation: {
+    "@type": "Occupation",
+    name: "Senior Software Engineer",
+    occupationLocation: {
+      "@type": "City",
+      name: "Lagos",
+    },
+    description:
+      "Architecting distributed systems, AI platforms, and applied machine learning solutions across Django Ninja, Next.js, and TypeScript.",
+    skills:
+      "Python, Django Ninja, TypeScript, Next.js, React, PostgreSQL, Docker, LangGraph, LlamaIndex, Agentic RAG, LLMs",
+    estimatedSalary: {
+      "@type": "MonetaryAmountDistribution",
+      name: "Senior Software Engineer",
+      currency: "USD",
+      duration: "P1Y",
+    },
+  },
   knowsAbout: [
     "Software Engineering",
     "Full Stack Development",
+    "Distributed Systems",
+    "Backend Architecture",
+    "Platform Engineering",
+    "Applied Artificial Intelligence",
+    "Agentic RAG",
+    "Large Language Models",
+    "LangGraph",
+    "LlamaIndex",
     "Django",
     "Django Ninja",
     "Next.js",
@@ -126,20 +190,52 @@ const personSchema = {
     "React",
     "PostgreSQL",
     "Docker",
-    "Machine Learning",
-    "Applied AI",
     "Natural Language Processing",
     "Computer Vision",
+    "Machine Learning",
+    "API Design",
+    "DevOps",
+    "AWS",
+    "GPU Pipeline Engineering",
+  ],
+  hasCredential: [
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "degree",
+      educationalLevel: "Bachelor",
+      name: "B.Sc. Computer Science",
+      recognizedBy: {
+        "@type": "CollegeOrUniversity",
+        name: "Federal University Oye-Ekiti",
+        address: { "@type": "PostalAddress", addressCountry: "Nigeria" },
+      },
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "certificate",
+      name: "Advanced Software Engineering Certification",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "GB-Tech Learning Centre",
+        address: { "@type": "PostalAddress", addressCountry: "Nigeria" },
+      },
+    },
   ],
   sameAs: [
     "https://github.com/i-MMANTECH",
     "https://www.linkedin.com/in/emmanuel-aro-8710972a9",
     "https://x.com/imman_tech1",
   ],
-  worksFor: { "@type": "Organization", name: "Tech4mation (NativeTalk)" },
+  worksFor: {
+    "@type": "Organization",
+    name: "LunarTech",
+    url: "https://lunartech.ai",
+    address: { "@type": "PostalAddress", addressLocality: "Austin", addressRegion: "TX", addressCountry: "US" },
+  },
   alumniOf: {
     "@type": "CollegeOrUniversity",
     name: "Federal University Oye-Ekiti",
+    address: { "@type": "PostalAddress", addressCountry: "Nigeria" },
   },
 } as const;
 

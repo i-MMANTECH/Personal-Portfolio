@@ -12,6 +12,7 @@ export const stack: readonly StackGroup[] = [
       "Django Ninja",
       "Django",
       "Python",
+      "PHP",
       "REST",
       "JWT Auth",
       "Laravel",
@@ -24,6 +25,7 @@ export const stack: readonly StackGroup[] = [
     items: [
       "Next.js (App Router)",
       "React",
+      "JavaScript",
       "TypeScript",
       "Tailwind CSS",
       "Shadcn/UI",

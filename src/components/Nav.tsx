@@ -6,6 +6,7 @@ import { cn } from "@/lib/cn";
 import { ThemeToggle } from "./ThemeToggle";
 
 const NAV_LINKS = [
+  { id: "manifesto", href: "#manifesto", label: "Philosophy" },
   { id: "about", href: "#about", label: "About" },
   { id: "stack", href: "#stack", label: "Stack" },
   { id: "experience", href: "#experience", label: "Experience" },

@@ -10,11 +10,12 @@ import {
 } from "react";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/cn";
+import { projects } from "@/content/projects";
 
 type Command = {
   id: string;
   label: string;
-  group: "Navigate" | "Actions" | "Links";
+  group: "Navigate" | "Actions" | "Links" | "Case Studies";
   hint?: string;
   run: () => void;
 };
@@ -44,29 +45,36 @@ export function CommandPalette() {
       close();
       window.open(url, "_blank", "noopener,noreferrer");
     };
+    const goTo = (path: string) => () => {
+      close();
+      router.push(path);
+    };
+
+    // Dynamically generate case study commands from all projects
+    const caseStudyCommands: Command[] = projects
+      .filter((p) => p.links.caseStudy)
+      .map((p) => ({
+        id: `cs-${p.id}`,
+        label: `Case study — ${p.title}`,
+        group: "Case Studies" as const,
+        hint: p.year,
+        run: goTo(p.links.caseStudy!),
+      }));
 
     return [
       { id: "about", label: "Go to About", group: "Navigate", run: scrollTo("about") },
+      { id: "manifesto", label: "Go to Philosophy / Manifesto", group: "Navigate", run: scrollTo("manifesto") },
       { id: "stack", label: "Go to Stack", group: "Navigate", run: scrollTo("stack") },
       { id: "experience", label: "Go to Experience", group: "Navigate", run: scrollTo("experience") },
       { id: "work", label: "Go to Featured Work", group: "Navigate", run: scrollTo("work") },
       { id: "contact", label: "Go to Contact", group: "Navigate", run: scrollTo("contact") },
-      {
-        id: "case-study",
-        label: "Read case study — Nativetalk Ticketing",
-        group: "Navigate",
-        run: () => {
-          close();
-          router.push("/work/nativetalk-ticketing");
-        },
-      },
       {
         id: "cv",
         label: "Download CV",
         group: "Actions",
         run: () => {
           close();
-          window.open("/Emmanuel-Aro-The-Nerd-CV.pdf", "_blank");
+          window.open("/Emmanuel-Aro-CV(Resume).pdf", "_blank");
         },
       },
       {
@@ -102,6 +110,7 @@ export function CommandPalette() {
         id: "x",
         label: "Open X / Twitter",
         group: "Links",
+        hint: "@imman_tech1",
         run: openExternal("https://x.com/imman_tech1"),
       },
       {
@@ -114,6 +123,7 @@ export function CommandPalette() {
           window.location.href = "mailto:emmanuelaro87@gmail.com";
         },
       },
+      ...caseStudyCommands,
     ];
   }, [close, router]);
 
@@ -182,9 +192,18 @@ export function CommandPalette() {
 
   if (!open) return null;
 
+  // Group commands for display
+  const groups = filtered.reduce<Record<string, Command[]>>((acc, cmd) => {
+    if (!acc[cmd.group]) acc[cmd.group] = [];
+    (acc[cmd.group] as Command[]).push(cmd);
+    return acc;
+  }, {});
+
+  let globalIndex = 0;
+
   return (
     <div
-      className="fixed inset-0 z-[110] flex items-start justify-center bg-ink/60 backdrop-blur-sm px-4 pt-[14vh]"
+      className="fixed inset-0 z-[110] flex items-start justify-center bg-ink/60 backdrop-blur-sm px-4 pt-[12vh]"
       onClick={close}
       role="presentation"
     >
@@ -211,48 +230,47 @@ export function CommandPalette() {
           </kbd>
         </div>
 
-        <ul className="max-h-[52vh] overflow-y-auto py-2">
+        <div className="max-h-[56vh] overflow-y-auto py-1">
           {filtered.length === 0 && (
-            <li className="px-4 py-6 text-center font-mono text-xs uppercase tracking-widest text-ink-mute">
+            <p className="px-4 py-6 text-center font-mono text-xs uppercase tracking-widest text-ink-mute">
               No matches
-            </li>
+            </p>
           )}
-          {filtered.map((command, i) => (
-            <li key={command.id}>
-              <button
-                type="button"
-                onClick={command.run}
-                onMouseMove={() => setActive(i)}
-                className={cn(
-                  "flex w-full items-center justify-between gap-4 px-4 py-3 text-left transition-colors",
-                  i === active ? "bg-ink text-paper" : "text-ink",
-                )}
-              >
-                <span className="flex items-center gap-3">
-                  <span
+          {Object.entries(groups).map(([group, cmds]) => (
+            <div key={group}>
+              <p className="px-4 py-2 font-mono text-[9px] uppercase tracking-[0.3em] text-ink-mute border-b border-ink/10">
+                {group}
+              </p>
+              {cmds.map((command) => {
+                const i = globalIndex++;
+                return (
+                  <button
+                    key={command.id}
+                    type="button"
+                    onClick={command.run}
+                    onMouseMove={() => setActive(i)}
                     className={cn(
-                      "font-mono text-[9px] uppercase tracking-[0.2em]",
-                      i === active ? "text-accent" : "text-ink-mute",
+                      "flex w-full items-center justify-between gap-4 px-4 py-3 text-left transition-colors",
+                      i === active ? "bg-ink text-paper" : "text-ink",
                     )}
                   >
-                    {command.group}
-                  </span>
-                  <span className="font-mono text-sm">{command.label}</span>
-                </span>
-                {command.hint && (
-                  <span
-                    className={cn(
-                      "font-mono text-[10px]",
-                      i === active ? "text-paper/60" : "text-ink-mute",
+                    <span className="font-mono text-sm">{command.label}</span>
+                    {command.hint && (
+                      <span
+                        className={cn(
+                          "font-mono text-[10px] shrink-0",
+                          i === active ? "text-paper/60" : "text-ink-mute",
+                        )}
+                      >
+                        {command.hint}
+                      </span>
                     )}
-                  >
-                    {command.hint}
-                  </span>
-                )}
-              </button>
-            </li>
+                  </button>
+                );
+              })}
+            </div>
           ))}
-        </ul>
+        </div>
 
         <div className="flex items-center gap-4 border-t border-ink px-4 py-2.5 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-mute">
           <span>↑↓ navigate</span>
