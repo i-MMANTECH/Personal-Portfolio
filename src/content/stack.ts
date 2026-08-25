@@ -9,6 +9,7 @@ export const stack: readonly StackGroup[] = [
     id: "backend",
     label: "Backend & APIs",
     items: [
+      "Node.js",
       "Django Ninja",
       "Django",
       "Python",
@@ -16,7 +17,6 @@ export const stack: readonly StackGroup[] = [
       "REST",
       "JWT Auth",
       "Laravel",
-      "Node.js",
     ],
   },
   {
