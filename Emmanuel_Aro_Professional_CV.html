@@ -26,18 +26,18 @@
         }
 
         body {
-            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            color: var(--ink);
-            background: #d4d4d4;
-            font-size: 10.5pt;
-            line-height: 1.6;
+            font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+            color: #000;
+            background: #fff;
+            font-size: 10pt;
+            line-height: 1.5;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
 
         @media print {
-            @page { size: A4; margin: 1.2cm 1.4cm; }
-            body { background: white; font-size: 10.5pt; }
+            @page { size: A4; margin: 1.2cm 1.5cm; }
+            body { font-size: 10pt; }
             .page { margin: 0; padding: 0; box-shadow: none; max-width: none; min-height: auto; }
             .no-print { display: none !important; }
             .job-block, .project-item, .skills-row { page-break-inside: avoid; }
@@ -65,86 +65,68 @@
 
         /* ── Header ────────────────────────────────────────────── */
         header {
-            padding: 2.2cm 2.4cm 1.4cm;
-            border-bottom: 1.5px solid var(--border);
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 1rem;
-            align-items: end;
+            padding: 1.5cm 1.5cm 0.5cm;
+            border-bottom: 2px solid #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 0.5cm;
         }
 
-        .header-left {}
+        .header-left { flex: 1; }
 
         .eyebrow {
-            font-family: 'DM Mono', monospace;
-            font-size: 8.5pt;
-            letter-spacing: 0.35em;
-            text-transform: uppercase;
-            color: var(--ink-mute);
-            margin-bottom: 0.5rem;
+            font-size: 10pt;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.25rem;
         }
 
         h1 {
-            font-family: 'DM Mono', monospace;
-            font-size: 26pt;
-            font-weight: 500;
-            letter-spacing: -0.02em;
+            font-size: 24pt;
+            font-weight: 700;
             line-height: 1;
-            color: var(--ink);
+            color: #000;
             text-transform: uppercase;
         }
 
         .role-line {
-            margin-top: 0.55rem;
-            font-family: 'DM Mono', monospace;
-            font-size: 9pt;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            color: var(--accent-dk);
-            font-weight: 500;
+            margin-top: 0.4rem;
+            font-size: 10pt;
+            font-weight: 600;
+            color: #333;
         }
 
         .contact-block {
-            font-family: 'DM Mono', monospace;
-            font-size: 8.5pt;
-            line-height: 1.8;
-            color: var(--ink-soft);
+            font-size: 9.5pt;
+            line-height: 1.6;
+            color: #000;
             text-align: right;
         }
 
         .contact-block a {
-            color: var(--ink-soft);
+            color: #000;
             text-decoration: none;
         }
         .contact-block a:hover { text-decoration: underline; }
 
         /* ── Body ──────────────────────────────────────────────── */
         .body {
-            padding: 1.4cm 2.4cm 1.8cm;
+            padding: 0 1.5cm 1.5cm;
             flex: 1;
         }
 
         /* ── Section heading ──────────────────────────────────── */
         h2 {
-            font-family: 'DM Mono', monospace;
-            font-size: 8.5pt;
-            font-weight: 500;
-            letter-spacing: 0.4em;
+            font-family: inherit;
+            font-size: 12pt;
+            font-weight: 700;
             text-transform: uppercase;
-            color: var(--ink-mute);
-            margin-top: 1.6rem;
-            margin-bottom: 0.8rem;
-            padding-bottom: 0.4rem;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        h2::before {
-            content: '//';
-            color: var(--accent-dk);
-            font-size: 8pt;
+            color: #000;
+            margin-top: 1.2rem;
+            margin-bottom: 0.6rem;
+            padding-bottom: 0.2rem;
+            border-bottom: 1px solid #000;
         }
 
         /* ── Executive profile ─────────────────────────────────── */
@@ -165,45 +147,31 @@
 
         /* ── Skills ────────────────────────────────────────────── */
         .skills-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 0.45rem;
+            display: block;
         }
 
         .skills-row {
-            display: grid;
-            grid-template-columns: 160px 1fr;
-            gap: 0.75rem;
-            align-items: baseline;
-            padding: 0.5rem 0.75rem;
-            border-left: 2px solid transparent;
-        }
-
-        .skills-row.mastery {
-            border-left-color: var(--accent);
-            background: #f7ffe0;
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.2rem;
         }
 
         .skill-cat {
-            font-family: 'DM Mono', monospace;
-            font-size: 7.5pt;
-            font-weight: 500;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--ink);
+            font-family: inherit;
+            font-size: 10pt;
+            font-weight: 700;
+            color: #000;
+            width: 140px;
+            flex-shrink: 0;
         }
 
         .skill-cat .tier {
-            display: inline-block;
-            font-size: 6.5pt;
-            letter-spacing: 0.15em;
-            color: var(--accent-dk);
-            margin-left: 0.3rem;
+            display: none;
         }
 
         .skill-list {
             font-size: 10pt;
-            color: var(--ink-soft);
+            color: #000;
         }
 
         /* ── Experience ────────────────────────────────────────── */
@@ -212,145 +180,119 @@
         }
 
         .job-header {
-            display: grid;
-            grid-template-columns: 1fr auto;
+            display: flex;
+            justify-content: space-between;
             align-items: baseline;
-            gap: 0.5rem;
         }
 
         .company-name {
-            font-family: 'DM Mono', monospace;
+            font-family: inherit;
             font-size: 11pt;
-            font-weight: 500;
-            color: var(--ink);
+            font-weight: 700;
+            color: #000;
         }
 
         .current-badge {
-            font-family: 'DM Mono', monospace;
-            font-size: 6.5pt;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            background: var(--accent);
-            color: var(--ink);
-            padding: 1px 5px;
-            font-weight: 500;
+            display: none;
         }
 
         .date-location {
-            font-family: 'DM Mono', monospace;
-            font-size: 7.5pt;
-            color: var(--ink-mute);
-            letter-spacing: 0.05em;
+            font-family: inherit;
+            font-size: 10pt;
+            color: #000;
+            font-weight: 600;
         }
 
         .job-title {
             font-style: italic;
-            color: var(--ink-soft);
+            font-weight: 600;
+            color: #000;
             font-size: 10pt;
-            margin: 0.2rem 0 0.5rem;
+            margin: 0.1rem 0 0.4rem;
         }
 
         .impact-callout {
-            display: flex;
-            align-items: baseline;
-            gap: 0.4rem;
-            margin-bottom: 0.5rem;
-            padding: 0.35rem 0.6rem;
-            border-left: 2px solid var(--accent);
-            background: #f9fff0;
+            margin-bottom: 0.3rem;
         }
 
         .impact-callout .label {
-            font-family: 'DM Mono', monospace;
-            font-size: 7pt;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--accent-dk);
-            font-weight: 500;
-            white-space: nowrap;
+            font-family: inherit;
+            font-size: 10pt;
+            font-weight: 700;
+            color: #000;
         }
 
         .impact-callout .text {
-            font-size: 9.5pt;
-            color: var(--ink-soft);
+            font-size: 10pt;
+            color: #000;
+            font-style: italic;
         }
 
         ul {
-            padding-left: 1rem;
-            color: var(--ink-soft);
+            padding-left: 1.2rem;
+            color: #000;
         }
 
         li {
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.2rem;
             font-size: 10pt;
-            line-height: 1.6;
-        }
-
-        li::marker { 
-            color: var(--accent-dk); 
+            line-height: 1.5;
         }
 
         /* ── Projects ──────────────────────────────────────────── */
         .projects-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
         }
 
         .project-item {
-            border: 1px solid var(--border);
-            padding: 0.7rem 0.85rem;
+            border: none;
+            padding: 0;
         }
 
         .project-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            gap: 0.5rem;
-            margin-bottom: 0.35rem;
+            margin-bottom: 0.2rem;
         }
 
         .project-title {
-            font-family: 'DM Mono', monospace;
-            font-size: 9pt;
-            font-weight: 500;
-            color: var(--ink);
+            font-family: inherit;
+            font-size: 11pt;
+            font-weight: 700;
+            color: #000;
         }
 
         .project-tags {
-            font-family: 'DM Mono', monospace;
-            font-size: 7pt;
-            color: var(--accent-dk);
-            font-weight: 500;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            white-space: nowrap;
+            font-family: inherit;
+            font-size: 9.5pt;
+            color: #000;
+            font-weight: 600;
         }
 
         .project-desc {
-            font-size: 9.5pt;
-            color: var(--ink-soft);
-            line-height: 1.55;
+            font-size: 10pt;
+            color: #000;
+            line-height: 1.5;
         }
 
         /* ── Education ─────────────────────────────────────────── */
         .edu-item {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 0.5rem;
+            display: flex;
+            justify-content: space-between;
             align-items: baseline;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #eee;
+            margin-bottom: 0.5rem;
         }
 
-        .edu-item:last-child { border-bottom: none; }
-
-        .edu-name { font-size: 10.5pt; color: var(--ink); font-weight: 600; }
-        .edu-sub { font-size: 9.5pt; color: var(--ink-mute); }
+        .edu-name { font-size: 10.5pt; color: #000; font-weight: 700; }
+        .edu-sub { font-size: 10pt; color: #000; font-style: italic; }
         .edu-year {
-            font-family: 'DM Mono', monospace;
-            font-size: 9pt;
-            color: var(--ink-mute);
+            font-family: inherit;
+            font-size: 10pt;
+            color: #000;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -421,11 +363,11 @@
                     <span class="text">Shipped Rosendahl (Legal AI) &amp; Dark Phoenix (GPU pipeline) end-to-end; QA'd Octavia &mdash; database optimisation recommendations adopted team-wide to support thousands of concurrent users without degradation.</span>
                 </div>
                 <ul>
-                    <li>Contributing to <strong>Rosendahl</strong>, LunarTech's flagship legal AI platform &mdash; a self-hosted agentic workspace built as &ldquo;Claude Code for law&rdquo; &mdash; engineering Agentic RAG pipelines (LlamaIndex / LangGraph) across 121+ active ECHR case workspaces with fully evidence-linked, formally verified outputs.</li>
-                    <li>Designing legal document processing APIs using LexNLP and Blackstone (spaCy) for automated named-entity extraction, citation parsing, and admissibility-risk scoring; enforcing a four-tier confidential AI model routing strategy (OpenRouter / Claude / Ollama local) ensuring privileged legal data never exits the local inference lane.</li>
-                    <li>Delivered <strong>Dark Phoenix</strong>, LunarTech's AI podcast video clipper &mdash; architecting the end-to-end GPU pipeline on Modal (TalkNet &rarr; WhisperX &rarr; Gemini moment selection &rarr; ffmpeg clip render), YouTube ingestion via yt-dlp, provider-agnostic S3 storage (Backblaze B2), and branded watermark pipeline.</li>
-                    <li>Conducted comprehensive QA testing and performance analysis on <strong><a href="https://octavia.lunartech.ai/" style="color: inherit; text-decoration: underline;">Octavia</a></strong> &mdash; LunarTech's world-class AI dubbing platform that translates video, audio, and subtitles into 60+ languages with 99% lip-sync accuracy and 10ms latency via advanced voice cloning (10,000+ hours translated). Identified critical database bottlenecks under multi-user concurrency load and delivered optimisation recommendations formally adopted by the engineering team &mdash; enabling the platform to scale for thousands of simultaneous users processing real-time translations without degradation.</li>
-                    <li>Resolved 8 critical production deployment failures spanning Modal GPU image builds, WhisperX/setuptools dependency conflicts, and Next.js RSC compiler violations &mdash; bringing the platform from broken to fully deployed on Vercel and Modal.</li>
+                    <li>Engineer Agentic RAG pipelines (LlamaIndex / LangGraph) for <strong>Rosendahl</strong>, a self-hosted legal AI workspace, delivering fully evidence-linked and formally verified outputs across 121+ active ECHR case workspaces.</li>
+                    <li>Design legal document processing APIs (LexNLP, spaCy) for automated entity extraction and risk scoring; enforce a four-tier confidential AI model routing strategy (OpenRouter, Claude, local Ollama) to maintain data privacy.</li>
+                    <li>Architected <strong>Dark Phoenix</strong>, an end-to-end GPU video pipeline on Modal (TalkNet, WhisperX, Gemini AI, ffmpeg) for automated podcast clipping, YouTube ingestion, and provider-agnostic S3 storage.</li>
+                    <li>Executed comprehensive performance QA on <strong>Octavia</strong>, an AI dubbing platform (60+ languages, 99% lip-sync accuracy); identified and resolved critical database bottlenecks to enable scaling for thousands of simultaneous users.</li>
+                    <li>Resolved critical production deployment failures involving Modal GPU image builds, dependency conflicts, and Next.js RSC compiler violations, ensuring reliable platform availability across Vercel and Modal.</li>
                 </ul>
             </div>
 
@@ -441,10 +383,10 @@
                     <span class="text">Built Boxonia's entire digital presence from the ground up &mdash; single-handedly brought a Nigerian 360&deg; film production &amp; talent management studio fully online, from zero infrastructure to a live, production-grade platform.</span>
                 </div>
                 <ul>
-                    <li>Conceived, designed, and engineered Boxonia's complete digital platform from zero &mdash; the company had no web presence before this engagement. Single-handedly brought a Nigerian 360&deg; film production &amp; talent management studio (<a href="https://www.boxonia.com/" style="color: inherit;">boxonia.com</a>) fully online, delivering a production-grade platform for story development, talent management, and project showcasing across a globally distributed creative operation.</li>
-                    <li>Currently architecting and maintaining the full platform ecosystem in Python &mdash; story development workflow engine, talent directory, project portfolio showcase, and Spotlight section &mdash; purpose-built for African storytelling at scale across film, TV, and commercials, consolidating workflows across 5+ distributed production teams.</li>
-                    <li>Continuing to evolve the talent-booking and cross-border coordination system &mdash; enabling zero-friction client onboarding and operating at an international production cadence with a 40% reduction in scheduling overhead.</li>
-                    <li>Maintaining and scaling relational schemas and secure RESTful APIs, ensuring high-availability data synchronisation between production units under strict SLA requirements as the company's audience and production volume grows.</li>
+                    <li>Conceived, designed, and engineered a complete digital platform from the ground up for a 360&deg; film production and talent management studio, establishing the company's first robust online presence.</li>
+                    <li>Architected and currently maintain a full Python-based platform ecosystem, including a story development workflow engine, talent directory, and project portfolio showcase, consolidating workflows across 5+ distributed production teams.</li>
+                    <li>Developed an automated talent-booking and cross-border coordination system, enabling zero-friction client onboarding and reducing scheduling overhead by 40%.</li>
+                    <li>Scaled relational schemas and secured RESTful APIs to ensure high-availability data synchronisation between production units under strict SLA requirements.</li>
                 </ul>
             </div>
 
@@ -495,10 +437,9 @@
                     <span class="text">Drove frontend performance gains (35% faster FCP) and database optimizations while mentoring the next wave of tech talent.</span>
                 </div>
                 <ul>
-                    <li>Joined Bincom Dev Center &mdash; an incubator and catalyst for tech excellence &mdash; to drive the development of innovative tech solutions while simultaneously nurturing the next generation of engineering talent.</li>
-                    <li>Architected high-performance, SEO-optimized frontend interfaces using Next.js (App Router) and React. Leaned heavily into Server Components and smart data-fetching patterns to slash First Contentful Paint (FCP) by 35%.</li>
-                    <li>Got my hands dirty in the database layer: overhauled relational MySQL schemas and refactored heavily-used SQL queries to eliminate latency spikes and speed up complex data retrieval by 20% under peak load.</li>
-                    <li>Took on a mentorship role, guiding junior developers through the trenches of TypeScript best practices, modular component design, and solid Git workflows to elevate the whole team's delivery velocity.</li>
+                    <li>Architected SEO-optimized frontend interfaces using Next.js (App Router) and React; implemented Server Components and advanced data-fetching patterns to reduce First Contentful Paint (FCP) by 35%.</li>
+                    <li>Overhauled relational MySQL schemas and refactored critical SQL queries, eliminating latency spikes and accelerating complex data retrieval by 20% under peak load.</li>
+                    <li>Mentored junior engineers in TypeScript best practices, modular component design, and strict Git workflows, measurably elevating team delivery velocity.</li>
                 </ul>
             </div>
 
@@ -513,10 +454,9 @@
                     <span class="text">Shipped production-ready frontend pages for an AI-powered Business Operating System&trade; at an early product stage &mdash; UI patterns and component architecture established became the foundation of the product's visual language.</span>
                 </div>
                 <ul>
-                    <li>Joined <strong>CyberBuddies</strong> &mdash; an AI-powered Business Operating System&trade; for SMBs that deploys AI business partners (AI CFO, AI COO, AI Executive Team&trade;) to help business leaders automate operations, understand performance, and make better decisions &mdash; as a Frontend Engineer at a pivotal early stage of the product.</li>
-                    <li>Built and iterated on high-quality frontend UI pages and components, translating complex AI product concepts into clean, intuitive, and accessible interfaces using modern frontend practices; UI patterns established during this period became the foundation of the platform's visual language.</li>
-                    <li>Contributed meaningfully to the team's delivery velocity &mdash; shipping production-ready code, participating in code reviews, and raising the bar on frontend standards at an early-stage company where every engineer's output has outsized impact.</li>
-                    <li>Supported migration of production workloads to AWS infrastructure, applying optimisation strategies that reduced cloud operating costs by 18% while maintaining 99.9% uptime SLA targets.</li>
+                    <li>Engineered high-quality frontend UI pages and components for an AI-powered Business Operating System&trade;, translating complex AI product requirements into clean, accessible interfaces.</li>
+                    <li>Established core UI patterns and component architecture that became the foundational visual language for the entire platform.</li>
+                    <li>Supported the migration of production workloads to AWS infrastructure, implementing optimization strategies that reduced cloud operating costs by 18% while maintaining 99.9% uptime SLAs.</li>
                 </ul>
             </div>
 
@@ -541,16 +481,15 @@
                     <span class="company-name">Fiatci.io</span>
                 </div>
                 <div class="date-location">Sep 2022 &ndash; Mar 2023 &nbsp;|&nbsp; Brussels, BE (Remote)</div>
-                <div class="job-title">Lead Full Stack Engineer &nbsp;<span style="font-family: 'DM Mono', monospace; font-size: 7.5pt; letter-spacing: 0.1em; color: var(--accent-dk); text-transform: uppercase; font-style: normal;">— Where It All Began</span></div>
+                <div class="job-title">Lead Full Stack Engineer</div>
                 <div class="impact-callout">
                     <span class="label">Impact:</span>
-                    <span class="text">The humble beginning &mdash; joined as a young developer and within months, through relentless passion, obsession with the craft, and an unshakeable work ethic, was hand-picked to lead a 7-engineer team. Shipped the company&rsquo;s first ever successful commercial product launch.</span>
+                    <span class="text">Promoted to Lead Engineer within months of joining; directed a 7-person team to successfully ship the company's first commercial product launch.</span>
                 </div>
                 <ul>
-                    <li><strong>Where it all began.</strong> Joined Fiatci.io early in my career as a young developer &mdash; and within just a few months, driven by an obsession with the craft, relentless hard work, and a passion that made me outpace engineers with years more experience, was chosen by the company to lead the engineering team. That single moment at a young age ignited everything: it proved that raw talent and dedication speak louder than years on a r&eacute;sum&eacute;.</li>
-                    <li>Stepped up to the Lead Full Stack Engineer role at a formative stage of my career &mdash; taking full ownership of a 7-person cross-functional engineering team, driving the end-to-end architecture, development, and production deployment of the company&rsquo;s flagship platform, and delivering the <strong>first successful commercial product launch in company history</strong>.</li>
-                    <li>Owned full technical direction across frontend, backend, and DevOps infrastructure &mdash; establishing rigorous code review standards, CI/CD release strategies, and zero-downtime production cutover protocols that set the engineering baseline for the entire team.</li>
-                    <li>This early leadership opportunity &mdash; earned, not given &mdash; built the confidence, accountability, and engineering instinct that define how I operate today as a global talent.</li>
+                    <li>Rapidly promoted to Lead Full Stack Engineer based on consistent technical delivery; took full ownership of a 7-person cross-functional engineering team.</li>
+                    <li>Directed the end-to-end architecture, development, and production deployment of the company&rsquo;s flagship platform, culminating in the first successful commercial product launch in company history.</li>
+                    <li>Established comprehensive technical direction across frontend, backend, and DevOps infrastructure, implementing rigorous code review standards, CI/CD release strategies, and zero-downtime production cutover protocols.</li>
                 </ul>
             </div>
 
