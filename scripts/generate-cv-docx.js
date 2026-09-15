@@ -138,17 +138,18 @@ const doc = new Document({
                 new Paragraph({
                     spacing: { after: 120 },
                     children: [
-                        new TextRun({ text: "Senior Full-Stack & Systems Software Engineer with 6+ years of experience architecting distributed platforms, real-time systems, and production-grade agentic AI pipelines. Proven track record of shipping end-to-end solutions using Python (Django Ninja), TypeScript (Next.js App Router), PostgreSQL, and Docker across 7 companies globally. Adept at designing defensible API contracts, orchestrating GPU serverless infrastructure for ML workloads, and optimizing database layers to ensure high availability, low latency, and massive concurrency under load." }),
+                        new TextRun({ text: "Full-Stack & Systems Software Engineer with 4+ years of professional engineering experience architecting distributed platforms, real-time systems, and production-grade applied AI pipelines. Proven track record of shipping end-to-end solutions using Python (Django Ninja), TypeScript (Next.js App Router), PostgreSQL, and Docker across 7 companies globally. Adept at designing defensible API contracts, orchestrating GPU serverless infrastructure for ML workloads, and optimizing database layers to ensure high availability, low latency, and massive concurrency under load." }),
                     ],
                 }),
 
                 // TECHNICAL ARSENAL
                 createHeading("TECHNICAL ARSENAL"),
                 createSkillBullet("Languages:", "Python, TypeScript, JavaScript (ES6+), PHP, SQL, HTML5/CSS3"),
-                createSkillBullet("Distributed Systems & Backend:", "Django Ninja, Node.js, Next.js (App Router), FastAPI, REST APIs, GraphQL, WebSockets, Celery, Redis"),
+                createSkillBullet("Frameworks & Full-Stack:", "Next.js (App Router), React, Django / Django Ninja, Laravel, FastAPI, Node.js"),
+                createSkillBullet("Distributed Systems & APIs:", "RESTful APIs, GraphQL, WebSockets, Celery, Redis, Task Queues"),
                 createSkillBullet("Applied AI & Computer Vision:", "Agentic RAG (LlamaIndex, LangGraph), Ollama, OpenRouter, WhisperX, LexNLP, OpenCV, Scikit-learn"),
-                createSkillBullet("Cloud, DevOps & Infrastructure:", "Docker, Docker Compose, AWS (EC2, S3, RDS), Modal (Serverless GPU), Linux/Bash, GitHub Actions CI/CD"),
-                createSkillBullet("Data & Storage:", "PostgreSQL (pgvector, RLS), MySQL, Redis, Supabase, Schema Modeling & Query Optimization"),
+                createSkillBullet("Databases & Storage:", "PostgreSQL (pgvector, RLS), Supabase, MySQL, Redis, Schema Modeling & Query Optimization"),
+                createSkillBullet("Cloud, DevOps & Tooling:", "Docker, Docker Compose, AWS (EC2, S3, RDS), Modal (Serverless GPU), Linux/Bash, GitHub Actions CI/CD, Postman"),
 
                 // EXP
                 createHeading("PROFESSIONAL EXPERIENCE"),
@@ -165,7 +166,7 @@ const doc = new Document({
                 ),
                 ...createJob(
                     "Boxonia Blueprint",
-                    "Oct 2024 – Present | Lagos, NG",
+                    "Oct 2024 – Present | Lagos, NG (Contract / Concurrent)",
                     "Software Engineer (Platform & Ecosystem Architecture)",
                     [
                         "Conceived and engineered a greenfield digital platform for a 360° film production and talent management studio, establishing the company's first robust online presence and distributed story workflow engine.",
@@ -245,22 +246,22 @@ const doc = new Document({
                 new Paragraph({
                     spacing: { after: 60 },
                     children: [
-                        new TextRun({ text: "B.Sc. in Computer Science", bold: true }),
-                        new TextRun({ text: " | Federal University Oye-Ekiti, Nigeria (2025)" }),
+                        new TextRun({ text: "B.Sc. in Computer Science ", bold: true }),
+                        new TextRun({ text: "— Federal University Oye-Ekiti, Nigeria (2025)" }),
                     ],
                 }),
                 new Paragraph({
                     spacing: { after: 60 },
                     children: [
-                        new TextRun({ text: "Full Stack Engineer Certificate", bold: true }),
-                        new TextRun({ text: " | Google Developer Student Club (2024)" }),
+                        new TextRun({ text: "Full Stack Engineer Certification ", bold: true }),
+                        new TextRun({ text: "— Google Developer Student Clubs (2024)" }),
                     ],
                 }),
                 new Paragraph({
                     spacing: { after: 60 },
                     children: [
-                        new TextRun({ text: "Advanced Software Engineering Certification", bold: true }),
-                        new TextRun({ text: " | GB-Tech Learning Centre (2023)" }),
+                        new TextRun({ text: "Advanced Software Engineering Certification ", bold: true }),
+                        new TextRun({ text: "— GB-Tech Learning Centre, Nigeria (2023)" }),
                     ],
                 }),
             ],
