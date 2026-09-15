@@ -29,7 +29,7 @@ export const profile = {
   achievements: {
     repos: 65,
     companies: 7,
-    yearsExperience: 6,
+    yearsExperience: 4,
     continents: 4,
     systemsShipped: 12,
     uptimeSLA: "99.9%",
