@@ -6,21 +6,21 @@ export type ProfileLink = {
 
 export const profile = {
   name: "Emmanuel Mobolaji Aro",
-  identity: "Software Engineering Nerd",
+  identity: "Software Engineer",
   role: "Software Engineer",
   focus: ["Systems", "Platforms", "Applied AI", "LLMs"] as const,
   location: "Lagos, Nigeria (Open to Global Remote)",
   tagline:
-    "I don't just build features — I architect systems. Full Stack Engineer shipping distributed platforms, Agentic AI pipelines, and production-grade infrastructure that holds under load. At my core, I'm simply a problem-solving nerd driven by innovation — deeply passionate about my craft and absolutely in love with what I do.",
+    "Full Stack Software Engineer focused on distributed systems and applied AI. I specialize in building backend architectures, data pipelines, and scalable APIs that solve actual engineering problems without the fluff.",
 
   /**
    * Philosophy lines — used in the Manifesto section.
    * Bold, confident, non-generic.
    */
   manifesto: [
-    "I build systems, not just features. Every line of code I write is a decision about architecture, scale, and ownership.",
-    "The through-line across everything I've shipped — legal AI, GPU pipelines, enterprise platforms — is the same: clean domain-driven design, defensible API surfaces, and infrastructure that holds under demanding production workloads.",
-    "Six years in. Seven companies. Four continents. Still the most curious person in the room.",
+    "I focus on clean architecture, resilient systems, and measurable outcomes. Every line of code I write is a decision about scale and maintainability.",
+    "My experience spans from building real-time collaboration platforms to orchestrating serverless GPU workloads. In every system, my priority is clean contracts, low latency, and reliability.",
+    "Four years in, shipping production code across global teams. Still prioritizing curiosity and technical depth over hype.",
   ] as const,
 
   /**
@@ -41,7 +41,7 @@ export const profile = {
    */
   bio: [
     "I operate end-to-end as a Full Stack Software Engineer across the Python (Django/Django Ninja) and TypeScript (Next.js App Router) ecosystems. Currently engineering AI systems at LunarTech — building Agentic RAG pipelines, legal document processing APIs, and LLM routing infrastructure — while independently shipping Geod AI, my own sovereign AI workspace product.",
-    "I care about clean domain-driven design, defensible API surfaces, and infrastructure that holds under demanding production workloads. Whether it's a 9-layer self-hosted legal AI stack, a GPU video processing pipeline on Modal, or a real-time WebRTC collaboration platform — the through-line is always the same: I build systems, not just features.",
+    "I care about clean domain-driven design, defensible API surfaces, and infrastructure that holds under demanding production workloads. Whether it's a 9-layer self-hosted legal AI stack, a GPU video processing pipeline on Modal, or a real-time WebRTC collaboration platform — the priority is always the same: building systems that work, scale, and solve the problem at hand.",
   ],
   meta: {
     experienceYears: "4+",

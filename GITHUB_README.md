@@ -17,11 +17,11 @@
 
 ## // about
 
-I'm a **Software Engineering Nerd** — deeply passionate about the craft and absolutely in love with what I do. I build scalable, production-grade platforms at the intersection of web systems and applied AI. I operate end-to-end as a Full Stack Engineer — **Django Ninja** on the backend, **Node.js** when the runtime demands it, and **Next.js (App Router) + TypeScript** on the frontend — with a discipline built around strict typing, containerized delivery, and measurable system outcomes.
+I'm a **Software Engineer** focused on building scalable, production-grade platforms at the intersection of web systems and applied AI. I operate end-to-end as a Full Stack Engineer — **Django Ninja** on the backend, **Node.js** when the runtime demands it, and **Next.js (App Router) + TypeScript** on the frontend — with a discipline built around strict typing, containerized delivery, and measurable system outcomes.
 
-**I don't just build features — I architect systems.** Every API I design, every schema I model, every pipeline I ship is built to hold under load, be extended by engineers I haven't met yet, and solve real problems at scale. Six years in. Seven companies. Four continents. Still the most curious problem-solving nerd in the room.
+**I architect resilient systems.** Every API I design, every schema I model, every pipeline I ship is built to hold under load, be extended by engineers I haven't met yet, and solve real problems at scale. Four years in. Seven companies. Four continents. Still prioritizing curiosity and technical depth over hype.
 
-> *"Simply a problem-solving nerd driven by innovation — deeply passionate about the craft and absolutely in love with what I do."*
+> *"Focused on clean architecture, resilient systems, and measurable outcomes. I build code that works, scales, and solves the problem at hand."*
 
 **Currently shipping:**
 - 🔬 **[Geod AI](https://geod-psi.vercel.app/)** — Sovereign multi-model AI workspace (Next.js · LLMs · WebRTC · Redis)
