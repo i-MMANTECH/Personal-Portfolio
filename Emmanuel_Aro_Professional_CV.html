@@ -9,14 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --ink:       #0b0b0c;
-            --ink-soft:  #2a2a2e;
-            --ink-mute:  #5a5a62;
             --paper:     #ffffff;
-            --accent:    #a6f500;
-            --accent-dk: #5c8a00;
-            --border:    #0b0b0c;
-            --gap:       1.5rem;
         }
 
         *, *::before, *::after {
@@ -29,154 +22,111 @@
             font-family: 'DM Sans', Arial, Helvetica, sans-serif;
             color: #000;
             background: #fff;
-            font-size: 10pt;
-            line-height: 1.5;
+            font-size: 9pt;
+            line-height: 1.35;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
 
         @media print {
-            @page { size: A4; margin: 1.2cm 1.5cm; }
-            body { font-size: 10pt; }
+            @page { size: A4; margin: 0.8cm 1cm; }
+            body { font-size: 9pt; }
             .page { margin: 0; padding: 0; box-shadow: none; max-width: none; min-height: auto; }
             .no-print { display: none !important; }
-            .job-block, .project-item, .skills-row { page-break-inside: avoid; }
+            .job-block, .skills-row { page-break-inside: avoid; }
             h2 { page-break-after: avoid; }
         }
 
-        /* ── Page ────────────────────────────────────────────── */
         .page {
             max-width: 21cm;
             min-height: 29.7cm;
-            margin: 2rem auto;
+            margin: 1rem auto;
             background: var(--paper);
             box-shadow: 0 20px 60px rgba(0,0,0,0.15);
             display: flex;
             flex-direction: column;
         }
 
-        /* ── Accent strip ──────────────────────────────────────── */
-        .accent-strip {
-            height: 4px;
-            background: var(--accent);
-            width: 100%;
-            flex-shrink: 0;
-        }
-
-        /* ── Header ────────────────────────────────────────────── */
         header {
-            padding: 1.5cm 1.5cm 0.5cm;
+            padding: 1cm 1cm 0.3cm;
             border-bottom: 2px solid #000;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 0.5cm;
-        }
-
-        .header-left { flex: 1; }
-
-        .eyebrow {
-            font-size: 10pt;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.4cm;
+            text-align: center;
         }
 
         h1 {
-            font-size: 24pt;
+            font-size: 20pt;
             font-weight: 700;
             line-height: 1;
             color: #000;
             text-transform: uppercase;
+            margin-bottom: 0.2rem;
         }
 
         .role-line {
-            margin-top: 0.4rem;
             font-size: 10pt;
-            font-weight: 600;
-            color: #333;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 0.3rem;
         }
 
         .contact-block {
-            font-size: 9.5pt;
-            line-height: 1.6;
+            font-size: 9pt;
+            line-height: 1.4;
             color: #000;
-            text-align: right;
         }
 
         .contact-block a {
             color: #000;
             text-decoration: none;
         }
-        .contact-block a:hover { text-decoration: underline; }
 
-        /* ── Body ──────────────────────────────────────────────── */
         .body {
-            padding: 0 1.5cm 1.5cm;
+            padding: 0 1cm 1cm;
             flex: 1;
         }
 
-        /* ── Section heading ──────────────────────────────────── */
         h2 {
-            font-family: inherit;
-            font-size: 12pt;
+            font-size: 11pt;
             font-weight: 700;
             text-transform: uppercase;
             color: #000;
-            margin-top: 1.2rem;
-            margin-bottom: 0.6rem;
-            padding-bottom: 0.2rem;
+            margin-top: 0.8rem;
+            margin-bottom: 0.3rem;
+            padding-bottom: 0.1rem;
             border-bottom: 1px solid #000;
         }
 
-        /* ── Executive profile ─────────────────────────────────── */
-        .executive-profile {
-            margin-top: 0;
-        }
-
         .executive-profile p {
-            font-size: 10.5pt;
-            color: var(--ink-soft);
-            line-height: 1.7;
+            font-size: 9pt;
+            color: #000;
+            line-height: 1.4;
         }
 
-        .executive-profile p strong {
-            color: var(--ink);
-            font-weight: 600;
-        }
-
-        /* ── Skills ────────────────────────────────────────────── */
         .skills-grid {
             display: block;
         }
 
         .skills-row {
             display: flex;
-            gap: 0.5rem;
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.15rem;
         }
 
         .skill-cat {
-            font-family: inherit;
-            font-size: 10pt;
             font-weight: 700;
             color: #000;
-            width: 140px;
+            width: 170px;
             flex-shrink: 0;
-        }
-
-        .skill-cat .tier {
-            display: none;
+            font-size: 9pt;
         }
 
         .skill-list {
-            font-size: 10pt;
+            font-size: 9pt;
             color: #000;
         }
 
-        /* ── Experience ────────────────────────────────────────── */
         .job-block {
-            margin-bottom: 1.2rem;
+            margin-bottom: 0.6rem;
         }
 
         .job-header {
@@ -186,19 +136,13 @@
         }
 
         .company-name {
-            font-family: inherit;
-            font-size: 11pt;
+            font-size: 10pt;
             font-weight: 700;
             color: #000;
         }
 
-        .current-badge {
-            display: none;
-        }
-
         .date-location {
-            font-family: inherit;
-            font-size: 10pt;
+            font-size: 9pt;
             color: #000;
             font-weight: 600;
         }
@@ -207,90 +151,32 @@
             font-style: italic;
             font-weight: 600;
             color: #000;
-            font-size: 10pt;
-            margin: 0.1rem 0 0.4rem;
-        }
-
-        .impact-callout {
-            margin-bottom: 0.3rem;
-        }
-
-        .impact-callout .label {
-            font-family: inherit;
-            font-size: 10pt;
-            font-weight: 700;
-            color: #000;
-        }
-
-        .impact-callout .text {
-            font-size: 10pt;
-            color: #000;
-            font-style: italic;
+            font-size: 9pt;
+            margin: 0.05rem 0 0.2rem;
         }
 
         ul {
-            padding-left: 1.2rem;
+            padding-left: 1rem;
             color: #000;
         }
 
         li {
-            margin-bottom: 0.2rem;
-            font-size: 10pt;
-            line-height: 1.5;
+            margin-bottom: 0.15rem;
+            font-size: 9pt;
+            line-height: 1.4;
         }
 
-        /* ── Projects ──────────────────────────────────────────── */
-        .projects-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-        }
-
-        .project-item {
-            border: none;
-            padding: 0;
-        }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 0.2rem;
-        }
-
-        .project-title {
-            font-family: inherit;
-            font-size: 11pt;
-            font-weight: 700;
-            color: #000;
-        }
-
-        .project-tags {
-            font-family: inherit;
-            font-size: 9.5pt;
-            color: #000;
-            font-weight: 600;
-        }
-
-        .project-desc {
-            font-size: 10pt;
-            color: #000;
-            line-height: 1.5;
-        }
-
-        /* ── Education ─────────────────────────────────────────── */
         .edu-item {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.2rem;
         }
 
-        .edu-name { font-size: 10.5pt; color: #000; font-weight: 700; }
-        .edu-sub { font-size: 10pt; color: #000; font-style: italic; }
+        .edu-name { font-size: 9.5pt; color: #000; font-weight: 700; }
+        .edu-sub { font-size: 9pt; color: #000; font-weight: normal; }
         .edu-year {
-            font-family: inherit;
-            font-size: 10pt;
+            font-size: 9.5pt;
             color: #000;
             font-weight: 600;
         }
