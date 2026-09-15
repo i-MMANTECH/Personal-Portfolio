@@ -3,133 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emmanuel Mobolaji Aro — Software Engineer · CV</title>
+    <title>Emmanuel Aro - CV</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --paper:     #ffffff;
+            --text-color: #000000;
         }
 
-        *, *::before, *::after {
+        * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
         body {
-            font-family: 'DM Sans', Arial, Helvetica, sans-serif;
-            color: #000;
-            background: #fff;
-            font-size: 9pt;
-            line-height: 1.35;
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text-color);
+            background: #ffffff;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
 
-        @media print {
-            @page { size: A4; margin: 0.8cm 1cm; }
-            body { font-size: 9pt; }
-            .page { margin: 0; padding: 0; box-shadow: none; max-width: none; min-height: auto; }
-            .no-print { display: none !important; }
-            .job-block, .skills-row { page-break-inside: avoid; }
-            h2 { page-break-after: avoid; }
+        @page {
+            size: letter;
+            margin: 0.5in;
         }
 
+        /* Container for web view to simulate paper */
         .page {
-            max-width: 21cm;
-            min-height: 29.7cm;
-            margin: 1rem auto;
-            background: var(--paper);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-            display: flex;
-            flex-direction: column;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        header {
-            padding: 1cm 1cm 0.3cm;
-            border-bottom: 2px solid #000;
-            margin-bottom: 0.4cm;
+        @media print {
+            body { background: none; }
+            .page { margin: 0; padding: 0; box-shadow: none; max-width: none; }
+        }
+
+        /* 1. Header & Contact */
+        h1 {
+            font-size: 18pt;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 2pt;
+            text-transform: uppercase;
             text-align: center;
         }
 
-        h1 {
-            font-size: 20pt;
-            font-weight: 700;
-            line-height: 1;
-            color: #000;
-            text-transform: uppercase;
-            margin-bottom: 0.2rem;
+        .subtitle {
+            font-size: 11pt;
+            font-weight: 500;
+            line-height: 1.15;
+            margin-bottom: 3pt;
+            text-align: center;
         }
 
-        .role-line {
-            font-size: 10pt;
-            font-weight: 700;
-            color: #000;
-            margin-bottom: 0.3rem;
-        }
-
-        .contact-block {
+        .contact-bar {
             font-size: 9pt;
-            line-height: 1.4;
-            color: #000;
+            font-weight: 400;
+            margin-bottom: 8pt;
+            text-align: center;
         }
 
-        .contact-block a {
-            color: #000;
+        .contact-bar a {
+            color: inherit;
             text-decoration: none;
         }
 
-        .body {
-            padding: 0 1cm 1cm;
-            flex: 1;
-        }
-
+        /* 2. Sections */
         h2 {
             font-size: 11pt;
             font-weight: 700;
             text-transform: uppercase;
-            color: #000;
-            margin-top: 0.8rem;
-            margin-bottom: 0.3rem;
-            padding-bottom: 0.1rem;
-            border-bottom: 1px solid #000;
+            line-height: 1.15;
+            border-bottom: 0.5pt solid #000;
+            margin-top: 6pt;
+            margin-bottom: 3pt;
+            padding-bottom: 1pt;
         }
 
-        .executive-profile p {
-            font-size: 9pt;
-            color: #000;
-            line-height: 1.4;
+        p {
+            font-size: 9.5pt;
+            font-weight: 400;
+            line-height: 1.18;
+            margin-bottom: 2pt;
         }
 
-        .skills-grid {
-            display: block;
+        /* 3. Job Headers & Dates */
+        .job-entry {
+            margin-bottom: 6pt;
         }
 
-        .skills-row {
-            display: flex;
-            margin-bottom: 0.15rem;
-        }
-
-        .skill-cat {
-            font-weight: 700;
-            color: #000;
-            width: 170px;
-            flex-shrink: 0;
-            font-size: 9pt;
-        }
-
-        .skill-list {
-            font-size: 9pt;
-            color: #000;
-        }
-
-        .job-block {
-            margin-bottom: 0.6rem;
-        }
-
-        .job-header {
+        .flex-row {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
@@ -137,223 +107,239 @@
 
         .company-name {
             font-size: 10pt;
-            font-weight: 700;
-            color: #000;
-        }
-
-        .date-location {
-            font-size: 9pt;
-            color: #000;
             font-weight: 600;
+            margin-bottom: 1pt;
         }
 
-        .job-title {
+        .location, .date {
+            font-size: 9.5pt;
+            font-weight: 400;
+        }
+
+        .role-title {
+            font-size: 9.5pt;
             font-style: italic;
-            font-weight: 600;
-            color: #000;
-            font-size: 9pt;
-            margin: 0.05rem 0 0.2rem;
+            font-weight: 400;
+            margin-bottom: 2pt;
         }
 
+        /* 4. Bullets */
         ul {
-            padding-left: 1rem;
-            color: #000;
+            list-style: none; /* We use a custom bullet for precise control */
         }
 
         li {
-            margin-bottom: 0.15rem;
-            font-size: 9pt;
-            line-height: 1.4;
-        }
-
-        .edu-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 0.2rem;
-        }
-
-        .edu-name { font-size: 9.5pt; color: #000; font-weight: 700; }
-        .edu-sub { font-size: 9pt; color: #000; font-weight: normal; }
-        .edu-year {
             font-size: 9.5pt;
-            color: #000;
-            font-weight: 600;
+            font-weight: 400;
+            line-height: 1.18;
+            margin-bottom: 2pt;
+            position: relative;
+            padding-left: 0.15in; /* 0.15in hanging indent */
         }
+
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            /* Adjust positioning to align nicely */
+        }
+
+        /* Prevent page break inside jobs */
+        .job-entry, .section-block {
+            page-break-inside: avoid;
+        }
+
+        /* Custom margin classes to fit exactly 2 pages */
+        .page-break {
+            page-break-before: always;
+        }
+
     </style>
 </head>
 <body>
     <div class="page">
-        <header>
-            <h1>EMMANUEL ARO</h1>
-            <p class="role-line">Full-Stack & Systems Software Engineer | Distributed Systems & Applied AI</p>
-            <div class="contact-block">
-                Lagos, Nigeria (Open to Global Remote & Relocation) | +234 907 331 8795 | <a href="mailto:emmanuelaro87@gmail.com">emmanuelaro87@gmail.com</a> | <a href="https://www.linkedin.com/in/emmanuel-aro-8710972a9" target="_blank">linkedin.com/in/emmanuel-aro</a> | <a href="https://github.com/i-MMANTECH" target="_blank">github.com/i-MMANTECH</a> | <a href="https://emmanuelaro.netlify.app/" target="_blank">emmanuelaro.netlify.app</a>
+        <!-- HEADER -->
+        <h1>EMMANUEL ARO</h1>
+        <div class="subtitle">Full-Stack & Systems Software Engineer | Distributed Systems & Applied AI</div>
+        <div class="contact-bar">
+            Lagos, Nigeria (Open to Global Remote & Relocation) | +234 907 331 8795 | <a href="mailto:emmanuelaro87@gmail.com">emmanuelaro87@gmail.com</a><br>
+            <a href="https://linkedin.com/in/emmanuel-aro">linkedin.com/in/emmanuel-aro</a> | <a href="https://github.com/i-MMANTECH">github.com/i-MMANTECH</a> | <a href="https://emmanuelaro.netlify.app">emmanuelaro.netlify.app</a>
+        </div>
+
+        <!-- PROFILE -->
+        <h2>EXECUTIVE TECHNICAL PROFILE</h2>
+        <div class="section-block">
+            <p>Full-Stack & Systems Software Engineer with 4+ years of professional engineering experience architecting distributed platforms, real-time systems, and production-grade applied AI pipelines. Proven track record of shipping end-to-end solutions using Python (Django Ninja), TypeScript (Next.js App Router), PostgreSQL, and Docker across 7 companies globally. Adept at designing defensible API contracts, orchestrating GPU serverless infrastructure for ML workloads, and optimizing database layers to ensure high availability, low latency, and massive concurrency under load.</p>
+        </div>
+
+        <!-- SKILLS -->
+        <h2>TECHNICAL ARSENAL</h2>
+        <div class="section-block">
+            <ul>
+                <li><strong>Languages:</strong> Python, TypeScript, JavaScript (ES6+), PHP, SQL, HTML5/CSS3</li>
+                <li><strong>Frameworks & Full-Stack:</strong> Next.js (App Router), React, Django / Django Ninja, Laravel, FastAPI, Node.js</li>
+                <li><strong>Distributed Systems & APIs:</strong> RESTful APIs, GraphQL, WebSockets, Celery, Redis, Task Queues</li>
+                <li><strong>Applied AI & Computer Vision:</strong> Agentic RAG (LlamaIndex, LangGraph), Ollama, OpenRouter, WhisperX, LexNLP, OpenCV, Scikit-learn</li>
+                <li><strong>Databases & Storage:</strong> PostgreSQL (pgvector, RLS), Supabase, MySQL, Redis, Schema Modeling & Query Optimization</li>
+                <li><strong>Cloud, DevOps & Tooling:</strong> Docker, Docker Compose, AWS (EC2, S3, RDS), Modal (Serverless GPU), Linux/Bash, GitHub Actions CI/CD, Postman</li>
+            </ul>
+        </div>
+
+        <!-- EXP P1 -->
+        <h2>PROFESSIONAL EXPERIENCE</h2>
+        
+        <div class="job-entry">
+            <div class="flex-row">
+                <div class="company-name">LunarTech</div>
+                <div class="location">Austin, TX (Remote)</div>
             </div>
-        </header>
-
-        <div class="body">
-
-            <!-- EXECUTIVE PROFILE -->
-            <h2>Executive Technical Profile</h2>
-            <div class="executive-profile">
-                <p>Full-Stack & Systems Software Engineer with 4+ years of professional engineering experience architecting distributed platforms, real-time systems, and production-grade applied AI pipelines. Proven track record of shipping end-to-end solutions using Python (Django Ninja), TypeScript (Next.js App Router), PostgreSQL, and Docker across 7 companies globally. Adept at designing defensible API contracts, orchestrating GPU serverless infrastructure for ML workloads, and optimizing database layers to ensure high availability, low latency, and massive concurrency under load.</p>
+            <div class="flex-row">
+                <div class="role-title">Software Engineer – AI Systems & Platform Engineering</div>
+                <div class="date">May 2026 – Present</div>
             </div>
+            <ul>
+                <li>Engineered Agentic RAG pipelines (LangGraph, LlamaIndex) for Rosendahl, a self-hosted legal AI workspace, delivering fully evidence-linked and formally verified outputs across 121+ active ECHR case workspaces.</li>
+                <li>Designed legal document processing APIs using LexNLP and spaCy for automated entity extraction and risk scoring, enforcing a 4-tier confidential AI model routing strategy (OpenRouter, Claude, local Ollama) to maintain strict data privacy.</li>
+                <li>Architected Dark Phoenix, an end-to-end GPU video pipeline on Modal (TalkNet, WhisperX, Gemini AI, ffmpeg) for automated podcast clipping, YouTube ingestion, and provider-agnostic S3 storage.</li>
+                <li>Executed comprehensive performance QA on Octavia, an AI dubbing platform (60+ languages, 99% lip-sync accuracy), implementing critical database optimization techniques that eliminated bottlenecks and enabled seamless scaling for over 10,000 users worldwide.</li>
+            </ul>
+        </div>
 
-            <!-- TECHNICAL ARSENAL -->
-            <h2>Technical Arsenal</h2>
-            <div class="skills-grid">
-                <div class="skills-row">
-                    <div class="skill-cat">Languages</div>
-                    <div class="skill-list">Python, TypeScript, JavaScript (ES4+), PHP, SQL, HTML5/CSS3</div>
-                </div>
-                <div class="skills-row">
-                    <div class="skill-cat">Frameworks & Full-Stack</div>
-                    <div class="skill-list">Next.js (App Router), React, Django / Django Ninja, Laravel, FastAPI, Node.js</div>
-                </div>
-                <div class="skills-row">
-                    <div class="skill-cat">Distributed Systems & APIs</div>
-                    <div class="skill-list">RESTful APIs, GraphQL, WebSockets, Celery, Redis, Task Queues</div>
-                </div>
-                <div class="skills-row">
-                    <div class="skill-cat">Applied AI & Computer Vision</div>
-                    <div class="skill-list">Agentic RAG (LlamaIndex, LangGraph), Ollama, OpenRouter, WhisperX, LexNLP, OpenCV, Scikit-learn</div>
-                </div>
-                <div class="skills-row">
-                    <div class="skill-cat">Databases & Storage</div>
-                    <div class="skill-list">PostgreSQL (pgvector, RLS), Supabase, MySQL, Redis, Schema Modeling & Query Optimization</div>
-                </div>
-                <div class="skills-row">
-                    <div class="skill-cat">Cloud, DevOps & Tooling</div>
-                    <div class="skill-list">Docker, Docker Compose, AWS (EC2, S3, RDS), Modal (Serverless GPU), Linux/Bash, GitHub Actions CI/CD, Postman</div>
-                </div>
+        <div class="job-entry">
+            <div class="flex-row">
+                <div class="company-name">Boxonia Blueprint</div>
+                <div class="location">Lagos, NG</div>
             </div>
-
-            <!-- PROFESSIONAL EXPERIENCE -->
-            <h2>Professional Experience</h2>
-
-            <div class="job-block">
-                <div class="job-header">
-                    <span class="company-name">LunarTech</span>
-                    <span class="date-location">May 2026 – Present &nbsp;|&nbsp; Austin, TX (Remote)</span>
-                </div>
-                <div class="job-title">Software Engineer — AI Systems & Platform Engineering</div>
-                <ul>
-                    <li>Engineered Agentic RAG pipelines (LangGraph, LlamaIndex) for Rosendahl, a self-hosted legal AI workspace, delivering fully evidence-linked and formally verified outputs across 121+ active ECHR case workspaces.</li>
-                    <li>Designed legal document processing APIs using LexNLP and spaCy for automated entity extraction and risk scoring, enforcing a 4-tier confidential AI model routing strategy (OpenRouter, Claude, local Ollama) to maintain strict data privacy.</li>
-                    <li>Architected Dark Phoenix, an end-to-end GPU video pipeline on Modal (TalkNet, WhisperX, Gemini AI, ffmpeg) for automated podcast clipping, YouTube ingestion, and provider-agnostic S3 storage.</li>
-                    <li>Executed comprehensive performance QA on Octavia, an AI dubbing platform (60+ languages, 99% lip-sync accuracy), implementing critical database optimization techniques that eliminated bottlenecks and enabled seamless scaling for over 10,000 users worldwide.</li>
-                </ul>
+            <div class="flex-row">
+                <div class="role-title">Software Engineer (Platform & Ecosystem Architecture)</div>
+                <div class="date">Oct 2024 – Present (Contract / Concurrent)</div>
             </div>
+            <ul>
+                <li>Conceived and engineered a greenfield digital platform for a 360&deg; film production and talent management studio, establishing the company's first robust online presence and distributed story workflow engine.</li>
+                <li>Architected a full Python-based platform ecosystem, consolidating workflows across 5+ distributed production teams to scale story development, talent directory management, and project portfolio showcasing.</li>
+                <li>Developed an automated talent-booking and cross-border coordination system, enabling zero-friction client onboarding and reducing scheduling operational overhead by 40%.</li>
+                <li>Scaled relational schemas and secured RESTful APIs to ensure high-availability data synchronization between international production units under strict SLA requirements.</li>
+            </ul>
+        </div>
 
-            <div class="job-block">
-                <div class="job-header">
-                    <span class="company-name">Boxonia Blueprint</span>
-                    <span class="date-location">Oct 2024 – Present &nbsp;|&nbsp; Lagos, NG (Contract / Concurrent)</span>
-                </div>
-                <div class="job-title">Software Engineer (Platform & Ecosystem Architecture)</div>
-                <ul>
-                    <li>Conceived and engineered a greenfield digital platform for a 360&deg; film production and talent management studio, establishing the company's first robust online presence and distributed story workflow engine.</li>
-                    <li>Architected a full Python-based platform ecosystem, consolidating workflows across 5+ distributed production teams to scale story development, talent directory management, and project portfolio showcasing.</li>
-                    <li>Developed an automated talent-booking and cross-border coordination system, enabling zero-friction client onboarding and reducing scheduling operational overhead by 40%.</li>
-                    <li>Scaled relational schemas and secured RESTful APIs to ensure high-availability data synchronization between international production units under strict SLA requirements.</li>
-                </ul>
+        <div class="job-entry">
+            <div class="flex-row">
+                <div class="company-name">Tech4mation (NativeTalk)</div>
+                <div class="location">Lagos, NG</div>
             </div>
-
-            <div class="job-block">
-                <div class="job-header">
-                    <span class="company-name">Tech4mation (NativeTalk)</span>
-                    <span class="date-location">Feb 2026 – Jun 2026 &nbsp;|&nbsp; Lagos, NG</span>
-                </div>
-                <div class="job-title">Software Developer, Platform Engineering</div>
-                <ul>
-                    <li>Led full-stack architecture for NativeTalk CRM (Next.js App Router, Django Ninja, PostgreSQL), driving aggressive bug-triage cycles that resolved critical customer-facing issues and directly increased company revenue.</li>
-                    <li>Architected TaskForge Pro, a high-throughput internal team-management platform with decoupled microservice boundaries and strictly typed API contracts.</li>
-                    <li>Standardized engineering environments by implementing containerized Docker workflows, successfully reducing new-developer onboarding time from 3 days to under 2 hours.</li>
-                </ul>
+            <div class="flex-row">
+                <div class="role-title">Software Developer, Platform Engineering</div>
+                <div class="date">Feb 2026 – Jun 2026</div>
             </div>
+            <ul>
+                <li>Led full-stack architecture for NativeTalk CRM (Next.js App Router, Django Ninja, PostgreSQL), driving aggressive bug-triage cycles that resolved critical customer-facing issues and directly increased company revenue.</li>
+                <li>Architected TaskForge Pro, a high-throughput internal team-management platform with decoupled microservice boundaries and strictly typed API contracts.</li>
+                <li>Standardized engineering environments by implementing containerized Docker workflows, successfully reducing new-developer onboarding time from 3 days to under 2 hours.</li>
+            </ul>
+        </div>
 
-            <div class="job-block">
-                <div class="job-header">
-                    <span class="company-name">Ornament & Crime</span>
-                    <span class="date-location">Aug 2024 – Mar 2026 &nbsp;|&nbsp; Birmingham, AL, US</span>
-                </div>
-                <div class="job-title">Frontend Engineer (Shopify Developer)</div>
-                <ul>
-                    <li>Architected the migration of a legacy Shopify Plus storefront to a componentized Liquid 2.0 and Tailwind CSS system, reducing page load times by 48% and driving a 31% uplift in checkout conversion.</li>
-                    <li>Engineered custom Shopify app integrations (inventory sync, loyalty tiers, fulfillment webhooks) via the Shopify Admin GraphQL API, eliminating manual operations and saving 20+ staff hours per week.</li>
-                    <li>Led the brand's migration to a headless-compatible architecture, setting the engineering foundation for future Next.js storefront decoupling with zero downtime.</li>
-                </ul>
+        <div class="page-break"></div>
+
+        <!-- EXP P2 -->
+        <div class="job-entry">
+            <div class="flex-row">
+                <div class="company-name">Ornament & Crime</div>
+                <div class="location">Birmingham, AL, US</div>
             </div>
-
-            <div class="job-block">
-                <div class="job-header">
-                    <span class="company-name">Bincom Dev Center</span>
-                    <span class="date-location">Sep 2025 – Jan 2026 &nbsp;|&nbsp; Lagos, NG</span>
-                </div>
-                <div class="job-title">Full Stack Developer</div>
-                <ul>
-                    <li>Architected SEO-optimized frontend interfaces using Next.js (App Router) and React, leveraging Server Components and advanced data-fetching patterns to reduce First Contentful Paint (FCP) by 35%.</li>
-                    <li>Overhauled relational MySQL schemas and refactored critical SQL queries, eliminating latency spikes and accelerating complex data retrieval by 20% under peak load.</li>
-                    <li>Mentored junior engineers in TypeScript best practices, modular component design, and strict Git workflows, measurably elevating team delivery velocity.</li>
-                </ul>
+            <div class="flex-row">
+                <div class="role-title">Frontend Engineer (Shopify Developer)</div>
+                <div class="date">Aug 2024 – Mar 2026</div>
             </div>
+            <ul>
+                <li>Architected the migration of a legacy Shopify Plus storefront to a componentized Liquid 2.0 and Tailwind CSS system, reducing page load times by 48% and driving a 31% uplift in checkout conversion.</li>
+                <li>Engineered custom Shopify app integrations (inventory sync, loyalty tiers, fulfillment webhooks) via the Shopify Admin GraphQL API, eliminating manual operations and saving 20+ staff hours per week.</li>
+                <li>Led the brand's migration to a headless-compatible architecture, setting the engineering foundation for future Next.js storefront decoupling with zero downtime.</li>
+            </ul>
+        </div>
 
-            <div class="job-block">
-                <div class="job-header">
-                    <span class="company-name">CyberBuddies</span>
-                    <span class="date-location">Apr 2024 – Aug 2024 &nbsp;|&nbsp; Ibadan, NG</span>
-                </div>
-                <div class="job-title">Frontend Engineer</div>
-                <ul>
-                    <li>Engineered high-quality frontend UI components for an AI-powered Business Operating System&trade;, establishing core visual language patterns that directly elevated user satisfaction and drove new B2B revenue growth.</li>
-                    <li>Supported the migration of production workloads to AWS infrastructure, implementing optimization strategies that reduced cloud operating costs by 18% while maintaining 99.9% uptime SLAs.</li>
-                </ul>
+        <div class="job-entry">
+            <div class="flex-row">
+                <div class="company-name">Bincom Dev Center</div>
+                <div class="location">Lagos, NG</div>
             </div>
-
-            <div class="job-block">
-                <div class="job-header">
-                    <span class="company-name">SafeSpace.org Association</span>
-                    <span class="date-location">May 2023 – Feb 2024 &nbsp;|&nbsp; California, US (Remote)</span>
-                </div>
-                <div class="job-title">Operations QA & Automation Engineer</div>
-                <ul>
-                    <li>Deployed Python/Django automated review pipelines, replacing manual verification loops to achieve a 30% throughput gain and a 50% reduction in data-entry errors.</li>
-                    <li>Instituted rigorous automated testing protocols within containerized Docker environments to establish company-wide benchmarks for system integrity.</li>
-                </ul>
+            <div class="flex-row">
+                <div class="role-title">Full Stack Developer</div>
+                <div class="date">Sep 2025 – Jan 2026</div>
             </div>
+            <ul>
+                <li>Architected SEO-optimized frontend interfaces using Next.js (App Router) and React, leveraging Server Components and advanced data-fetching patterns to reduce First Contentful Paint (FCP) by 35%.</li>
+                <li>Overhauled relational MySQL schemas and refactored critical SQL queries, eliminating latency spikes and accelerating complex data retrieval by 20% under peak load.</li>
+                <li>Mentored junior engineers in TypeScript best practices, modular component design, and strict Git workflows, measurably elevating team delivery velocity.</li>
+            </ul>
+        </div>
 
-            <div class="job-block">
-                <div class="job-header">
-                    <span class="company-name">Fiatci.io</span>
-                    <span class="date-location">Sep 2022 – Mar 2023 &nbsp;|&nbsp; Brussels, BE (Remote)</span>
-                </div>
-                <div class="job-title">Lead Full Stack Engineer</div>
-                <ul>
-                    <li>Rapidly promoted to Lead Full Stack Engineer based on consistent technical delivery, taking full ownership of a 7-person cross-functional engineering team.</li>
-                    <li>Directed the end-to-end architecture, development, and production deployment of the company’s flagship platform, culminating in the first successful commercial product launch in company history.</li>
-                    <li>Established comprehensive technical direction across frontend, backend, and DevOps infrastructure, implementing rigorous code review standards, CI/CD release strategies, and zero-downtime production cutover protocols.</li>
-                </ul>
+        <div class="job-entry">
+            <div class="flex-row">
+                <div class="company-name">CyberBuddies</div>
+                <div class="location">Ibadan, NG</div>
             </div>
+            <div class="flex-row">
+                <div class="role-title">Frontend Engineer</div>
+                <div class="date">Apr 2024 – Aug 2024</div>
+            </div>
+            <ul>
+                <li>Engineered high-quality frontend UI components for an AI-powered Business Operating System&trade;, establishing core visual language patterns that directly elevated user satisfaction and drove new B2B revenue growth.</li>
+                <li>Supported the migration of production workloads to AWS infrastructure, implementing optimization strategies that reduced cloud operating costs by 18% while maintaining 99.9% uptime SLAs.</li>
+            </ul>
+        </div>
 
-            <!-- FLAGSHIP SYSTEMS -->
-            <h2>Flagship Systems & Applied AI Projects</h2>
+        <div class="job-entry">
+            <div class="flex-row">
+                <div class="company-name">SafeSpace.org Association</div>
+                <div class="location">California, US (Remote)</div>
+            </div>
+            <div class="flex-row">
+                <div class="role-title">Operations QA & Automation Engineer</div>
+                <div class="date">May 2023 – Feb 2024</div>
+            </div>
+            <ul>
+                <li>Deployed Python/Django automated review pipelines, replacing manual verification loops to achieve a 30% throughput gain and a 50% reduction in data-entry errors.</li>
+                <li>Instituted rigorous automated testing protocols within containerized Docker environments to establish company-wide benchmarks for system integrity.</li>
+            </ul>
+        </div>
+
+        <div class="job-entry">
+            <div class="flex-row">
+                <div class="company-name">Fiatci.io</div>
+                <div class="location">Brussels, BE (Remote)</div>
+            </div>
+            <div class="flex-row">
+                <div class="role-title">Lead Full Stack Engineer</div>
+                <div class="date">Sep 2022 – Mar 2023</div>
+            </div>
+            <ul>
+                <li>Rapidly promoted to Lead Full Stack Engineer based on consistent technical delivery, taking full ownership of a 7-person cross-functional engineering team.</li>
+                <li>Directed the end-to-end architecture, development, and production deployment of the company’s flagship platform, culminating in the first successful commercial product launch in company history.</li>
+                <li>Established comprehensive technical direction across frontend, backend, and DevOps infrastructure, implementing rigorous code review standards, CI/CD release strategies, and zero-downtime production cutover protocols.</li>
+            </ul>
+        </div>
+
+        <!-- FLAGSHIP -->
+        <h2>FLAGSHIP SYSTEMS & APPLIED AI PROJECTS</h2>
+        <div class="section-block">
             <ul>
                 <li><strong>Geod (Sovereign AI Workspace):</strong> Architected a unified real-time collaboration workspace featuring WebRTC audio/video, multi-modal OCR, a sandboxed code runtime, and decoupled vector/queue pipelines with zero vendor lock-in.</li>
                 <li><strong>Rosendahl (Legal AI Engine):</strong> Engineered a legal document processing platform utilizing LangGraph and LlamaIndex for multi-tier confidential routing and LexNLP for automated entity extraction.</li>
                 <li><strong>Dark Phoenix (GPU Video Ingestion Pipeline):</strong> Developed an end-to-end automated podcast clipping pipeline deployed on Modal serverless infrastructure, integrating WhisperX, TalkNet, and Gemini AI.</li>
                 <li><strong>Enterprise Malware Detection Engine:</strong> Built a production-grade supervised ML classifier for real-time endpoint threat detection, incorporating automated feature extraction and continuous retraining pipelines.</li>
             </ul>
+        </div>
 
-            <!-- EDUCATION -->
-            <h2>Education & Credentials</h2>
+        <!-- EDU -->
+        <h2>EDUCATION & CREDENTIALS</h2>
+        <div class="section-block">
             <ul>
-                <li><strong>B.Sc. in Computer Science</strong> — Federal University Oye-Ekiti, Nigeria (2025)</li>
-                <li><strong>Full Stack Engineer Certification</strong> — Google Developer Student Clubs (2024)</li>
-                <li><strong>Advanced Software Engineering Certification</strong> — GB-Tech Learning Centre, Nigeria (2023)</li>
+                <li><strong>B.Sc. in Computer Science</strong> &mdash; Federal University Oye-Ekiti, Nigeria (2025)</li>
+                <li><strong>Full Stack Engineer Certification</strong> &mdash; Google Developer Student Clubs (2024)</li>
+                <li><strong>Advanced Software Engineering Certification</strong> &mdash; GB-Tech Learning Centre, Nigeria (2023)</li>
             </ul>
+        </div>
 
-        </div><!-- /body -->
-    </div><!-- /page -->
+    </div>
 </body>
 </html>
