@@ -40,7 +40,7 @@ export const experience: readonly Role[] = [
   },
   {
     company: "Tech4mation (NativeTalk)",
-    title: "Senior Software Developer, Platform Engineering",
+    title: "Software Developer, Platform Engineering",
     period: "Feb 2026 — Jun 2026",
     location: "Lagos, NG",
     current: false,

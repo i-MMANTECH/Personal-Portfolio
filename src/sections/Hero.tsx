@@ -14,10 +14,10 @@ function delay(ms: number): React.CSSProperties {
 
 const SPEC_ROWS = [
   { key: "Repos", value: "65+ public" },
-  { key: "Years", value: "6+ in stack" },
+  { key: "Years", value: "4+ in stack" },
   { key: "Stack", value: "Django Ninja · Next.js · TS" },
   { key: "Now", value: "Geod AI · LunarTech" },
-  { key: "Open to", value: "Senior / Staff roles" },
+  { key: "Open to", value: "Staff roles" },
   { key: "Based", value: "Lagos, NG (Global Remote)" },
 ] as const;
 

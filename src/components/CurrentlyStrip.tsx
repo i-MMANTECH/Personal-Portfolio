@@ -3,7 +3,7 @@ import { Reveal } from "./ui/Reveal";
 const ITEMS = [
   { label: "Shipping", value: "Geod AI" },
   { label: "Building", value: "Rosendahl @ LunarTech" },
-  { label: "Open to", value: "Senior / Staff roles" },
+  { label: "Open to", value: "Staff roles" },
 ] as const;
 
 export function CurrentlyStrip() {

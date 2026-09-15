@@ -11,9 +11,9 @@ import { ConsoleSignature } from "@/components/ConsoleSignature";
 import "./globals.css";
 
 const SITE_URL = "https://emmanuelaro.netlify.app";
-const SITE_NAME = "Emmanuel Mobolaji Aro — Senior Software Engineer · Global Talent";
+const SITE_NAME = "Emmanuel Mobolaji Aro — Software Engineer · Global Talent";
 const SITE_DESCRIPTION =
-  "Emmanuel Mobolaji Aro — Senior Full Stack Software Engineer based in Lagos, Nigeria (Open to Global Remote). Architecting Agentic AI systems, distributed platforms, and applied-ML solutions at LunarTech. 6+ years. 65+ repos. 4 continents. Django Ninja · Next.js · TypeScript · LangGraph · LlamaIndex.";
+  "Emmanuel Mobolaji Aro — Full Stack Software Engineer based in Lagos, Nigeria (Open to Global Remote). Architecting Agentic AI systems, distributed platforms, and applied-ML solutions at LunarTech. 4+ years. 65+ repos. 4 continents. Django Ninja · Next.js · TypeScript · LangGraph · LlamaIndex.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
     "Emmanuel Aro portfolio",
     "Emmanuel Aro software engineer",
     // Role + location signals
-    "Senior Software Engineer Lagos Nigeria",
-    "Senior Full Stack Engineer Africa",
+    "Software Engineer Lagos Nigeria",
+    "Full Stack Engineer Africa",
     "Software Engineering Nerd",
     "top software engineer Lagos",
     "best software engineer Nigeria",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     "best software engineer Africa",
     "software engineer Nigeria 2026",
     "software engineer Lagos Nigeria",
-    "Senior Full Stack Engineer Lagos",
+    "Full Stack Engineer Lagos",
     "global software engineer Nigeria",
     "promising software engineer Africa",
     "software engineer open to remote",
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     // Broader discovery
     "distributed systems engineer Nigeria",
     "backend platform engineer Africa",
-    "senior engineer remote Lagos",
+    "software engineer remote Lagos",
     "software architect Nigeria",
   ],
   openGraph: {
@@ -141,7 +141,7 @@ const personSchema = {
     "iMMAN-Tech",
     "Software Engineering Nerd",
   ],
-  jobTitle: "Senior Full Stack Software Engineer",
+  jobTitle: "Full Stack Software Engineer",
   description: SITE_DESCRIPTION,
   url: SITE_URL,
   email: "emmanuelaro87@gmail.com",
@@ -156,7 +156,7 @@ const personSchema = {
   nationality: { "@type": "Country", name: "Nigeria" },
   hasOccupation: {
     "@type": "Occupation",
-    name: "Senior Software Engineer",
+    name: "Software Engineer",
     occupationLocation: {
       "@type": "City",
       name: "Lagos",
@@ -167,7 +167,7 @@ const personSchema = {
       "Python, Django Ninja, TypeScript, Next.js, React, PostgreSQL, Docker, LangGraph, LlamaIndex, Agentic RAG, LLMs",
     estimatedSalary: {
       "@type": "MonetaryAmountDistribution",
-      name: "Senior Software Engineer",
+      name: "Software Engineer",
       currency: "USD",
       duration: "P1Y",
     },

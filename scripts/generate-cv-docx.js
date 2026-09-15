@@ -122,7 +122,7 @@ const doc = new Document({
                     alignment: AlignmentType.CENTER,
                     spacing: { before: 60, after: 100 },
                     children: [
-                        new TextRun({ text: "Senior Full-Stack & Systems Software Engineer | Distributed Systems & Applied AI", bold: true, size: 20 }), // 10pt
+                        new TextRun({ text: "Full-Stack & Systems Software Engineer | Distributed Systems & Applied AI", bold: true, size: 20 }), // 10pt
                     ],
                 }),
                 new Paragraph({
@@ -144,7 +144,7 @@ const doc = new Document({
 
                 // TECHNICAL ARSENAL
                 createHeading("TECHNICAL ARSENAL"),
-                createSkillBullet("Languages:", "Python, TypeScript, JavaScript (ES6+), PHP, SQL, HTML5/CSS3"),
+                createSkillBullet("Languages:", "Python, TypeScript, JavaScript (ES4+), PHP, SQL, HTML5/CSS3"),
                 createSkillBullet("Frameworks & Full-Stack:", "Next.js (App Router), React, Django / Django Ninja, Laravel, FastAPI, Node.js"),
                 createSkillBullet("Distributed Systems & APIs:", "RESTful APIs, GraphQL, WebSockets, Celery, Redis, Task Queues"),
                 createSkillBullet("Applied AI & Computer Vision:", "Agentic RAG (LlamaIndex, LangGraph), Ollama, OpenRouter, WhisperX, LexNLP, OpenCV, Scikit-learn"),
@@ -178,7 +178,7 @@ const doc = new Document({
                 ...createJob(
                     "Tech4mation (NativeTalk)",
                     "Feb 2026 – Jun 2026 | Lagos, NG",
-                    "Senior Software Developer, Platform Engineering",
+                    "Software Developer, Platform Engineering",
                     [
                         "Led full-stack architecture for NativeTalk CRM (Next.js App Router, Django Ninja, PostgreSQL), driving aggressive bug-triage cycles that resolved critical customer-facing issues and directly increased company revenue.",
                         "Architected TaskForge Pro, a high-throughput internal team-management platform with decoupled microservice boundaries and strictly typed API contracts.",

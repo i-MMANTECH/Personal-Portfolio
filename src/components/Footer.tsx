@@ -21,7 +21,7 @@ export function Footer() {
               className="h-1.5 w-1.5 bg-accent animate-pulse shrink-0"
             />
             <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.3em] text-ink-soft">
-              Available for senior / staff roles · Global remote · Open to
+              Available for staff roles · Global remote · Open to
               relocation
             </span>
           </div>

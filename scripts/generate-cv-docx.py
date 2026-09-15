@@ -53,7 +53,7 @@ run.font.size = Pt(20)
 p = doc.add_paragraph()
 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 p.paragraph_format.space_after = Pt(2)
-run = p.add_run("Senior Full-Stack & Systems Software Engineer | Distributed Systems & Applied AI")
+run = p.add_run("Full-Stack & Systems Software Engineer | Distributed Systems & Applied AI")
 run.font.bold = True
 run.font.size = Pt(10)
 
@@ -66,12 +66,12 @@ run.font.size = Pt(9)
 
 # EXEC PROFILE
 add_header(doc, "EXECUTIVE TECHNICAL PROFILE")
-p = doc.add_paragraph("Senior Full-Stack & Systems Software Engineer with 6+ years of experience architecting distributed platforms, real-time systems, and production-grade agentic AI pipelines. Proven track record of shipping end-to-end solutions using Python (Django Ninja), TypeScript (Next.js App Router), PostgreSQL, and Docker across 7 companies globally. Adept at designing defensible API contracts, orchestrating GPU serverless infrastructure for ML workloads, and optimizing database layers to ensure high availability, low latency, and massive concurrency under load.")
+p = doc.add_paragraph("Full-Stack & Systems Software Engineer with 4+ years of experience architecting distributed platforms, real-time systems, and production-grade agentic AI pipelines. Proven track record of shipping end-to-end solutions using Python (Django Ninja), TypeScript (Next.js App Router), PostgreSQL, and Docker across 7 companies globally. Adept at designing defensible API contracts, orchestrating GPU serverless infrastructure for ML workloads, and optimizing database layers to ensure high availability, low latency, and massive concurrency under load.")
 p.paragraph_format.space_after = Pt(8)
 
 # TECHNICAL ARSENAL
 add_header(doc, "TECHNICAL ARSENAL")
-add_bullet(doc, "**Languages:** Python, TypeScript, JavaScript (ES6+), PHP, SQL, HTML5/CSS3")
+add_bullet(doc, "**Languages:** Python, TypeScript, JavaScript (ES4+), PHP, SQL, HTML5/CSS3")
 add_bullet(doc, "**Distributed Systems & Backend:** Django Ninja, Node.js, Next.js (App Router), FastAPI, REST APIs, GraphQL, WebSockets, Celery, Redis")
 add_bullet(doc, "**Applied AI & Computer Vision:** Agentic RAG (LlamaIndex, LangGraph), Ollama, OpenRouter, WhisperX, LexNLP, OpenCV, Scikit-learn")
 add_bullet(doc, "**Cloud, DevOps & Infrastructure:** Docker, Docker Compose, AWS (EC2, S3, RDS), Modal (Serverless GPU), Linux/Bash, GitHub Actions CI/CD")
@@ -115,7 +115,7 @@ add_job(doc, "Boxonia Blueprint", "Oct 2024 – Present | Lagos, NG", "Software 
     "Scaled relational schemas and secured RESTful APIs to ensure high-availability data synchronization between international production units under strict SLA requirements."
 ])
 
-add_job(doc, "Tech4mation (NativeTalk)", "Feb 2026 – Jun 2026 | Lagos, NG", "Senior Software Developer, Platform Engineering", [
+add_job(doc, "Tech4mation (NativeTalk)", "Feb 2026 – Jun 2026 | Lagos, NG", "Software Developer, Platform Engineering", [
     "Led full-stack architecture for NativeTalk CRM (Next.js App Router, Django Ninja, PostgreSQL), driving aggressive bug-triage cycles that resolved critical customer-facing issues and directly increased company revenue.",
     "Architected TaskForge Pro, a high-throughput internal team-management platform with decoupled microservice boundaries and strictly typed API contracts.",
     "Standardized engineering environments by implementing containerized Docker workflows, successfully reducing new-developer onboarding time from 3 days to under 2 hours."

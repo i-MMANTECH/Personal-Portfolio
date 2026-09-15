@@ -7,11 +7,11 @@ export type ProfileLink = {
 export const profile = {
   name: "Emmanuel Mobolaji Aro",
   identity: "Software Engineering Nerd",
-  role: "Senior Software Engineer",
+  role: "Software Engineer",
   focus: ["Systems", "Platforms", "Applied AI", "LLMs"] as const,
   location: "Lagos, Nigeria (Open to Global Remote)",
   tagline:
-    "I don't just build features — I architect systems. Senior Full Stack Engineer shipping distributed platforms, Agentic AI pipelines, and production-grade infrastructure that holds under load. At my core, I'm simply a problem-solving nerd driven by innovation — deeply passionate about my craft and absolutely in love with what I do.",
+    "I don't just build features — I architect systems. Full Stack Engineer shipping distributed platforms, Agentic AI pipelines, and production-grade infrastructure that holds under load. At my core, I'm simply a problem-solving nerd driven by innovation — deeply passionate about my craft and absolutely in love with what I do.",
 
   /**
    * Philosophy lines — used in the Manifesto section.
@@ -40,11 +40,11 @@ export const profile = {
    * Quantified achievements shown in bio and meta.
    */
   bio: [
-    "I operate end-to-end as a Senior Full Stack Software Engineer across the Python (Django/Django Ninja) and TypeScript (Next.js App Router) ecosystems. Currently engineering AI systems at LunarTech — building Agentic RAG pipelines, legal document processing APIs, and LLM routing infrastructure — while independently shipping Geod AI, my own sovereign AI workspace product.",
+    "I operate end-to-end as a Full Stack Software Engineer across the Python (Django/Django Ninja) and TypeScript (Next.js App Router) ecosystems. Currently engineering AI systems at LunarTech — building Agentic RAG pipelines, legal document processing APIs, and LLM routing infrastructure — while independently shipping Geod AI, my own sovereign AI workspace product.",
     "I care about clean domain-driven design, defensible API surfaces, and infrastructure that holds under demanding production workloads. Whether it's a 9-layer self-hosted legal AI stack, a GPU video processing pipeline on Modal, or a real-time WebRTC collaboration platform — the through-line is always the same: I build systems, not just features.",
   ],
   meta: {
-    experienceYears: "6+",
+    experienceYears: "4+",
     educationPrimary: "B.Sc. Computer Science",
     educationSecondary: "Federal University Oye-Ekiti",
     certification: "Software Engineering Certification",

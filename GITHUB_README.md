@@ -1,9 +1,9 @@
 <div align="center">
 
 # Emmanuel Mobolaji Aro
-### Senior Full Stack Engineer · AI Systems · Platform Architecture
+### Full Stack Engineer · AI Systems · Platform Architecture
 
-**`LOCATION`** Lagos, NG &nbsp;·&nbsp; **`ROLE`** Full Stack & AI/ML &nbsp;·&nbsp; **`STATUS`** 🟢 Shipping &nbsp;·&nbsp; **`OPEN TO`** Senior / Staff / Principal Roles
+**`LOCATION`** Lagos, NG &nbsp;·&nbsp; **`ROLE`** Full Stack & AI/ML &nbsp;·&nbsp; **`STATUS`** 🟢 Shipping &nbsp;·&nbsp; **`OPEN TO`** Staff / Principal Roles
 
 [![Profile Views](https://komarev.com/ghpvc/?username=i-MMANTECH&style=flat-square&color=a6f500&label=PROFILE+VIEWS)](https://github.com/i-MMANTECH)
 &nbsp;
@@ -17,7 +17,7 @@
 
 ## // about
 
-I'm a **Software Engineering Nerd** — deeply passionate about the craft and absolutely in love with what I do. I build scalable, production-grade platforms at the intersection of web systems and applied AI. I operate end-to-end as a Senior Full Stack Engineer — **Django Ninja** on the backend, **Node.js** when the runtime demands it, and **Next.js (App Router) + TypeScript** on the frontend — with a discipline built around strict typing, containerized delivery, and measurable system outcomes.
+I'm a **Software Engineering Nerd** — deeply passionate about the craft and absolutely in love with what I do. I build scalable, production-grade platforms at the intersection of web systems and applied AI. I operate end-to-end as a Full Stack Engineer — **Django Ninja** on the backend, **Node.js** when the runtime demands it, and **Next.js (App Router) + TypeScript** on the frontend — with a discipline built around strict typing, containerized delivery, and measurable system outcomes.
 
 **I don't just build features — I architect systems.** Every API I design, every schema I model, every pipeline I ship is built to hold under load, be extended by engineers I haven't met yet, and solve real problems at scale. Six years in. Seven companies. Four continents. Still the most curious problem-solving nerd in the room.
 
