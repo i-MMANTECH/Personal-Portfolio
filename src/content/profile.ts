@@ -20,7 +20,7 @@ export const profile = {
   manifesto: [
     "I focus on clean architecture, resilient systems, and measurable outcomes. Every line of code I write is a decision about scale and maintainability.",
     "My experience spans from building real-time collaboration platforms to orchestrating serverless GPU workloads. In every system, my priority is clean contracts, low latency, and reliability.",
-    "Four years in, shipping production code across global teams. Still prioritizing curiosity and technical depth over hype.",
+    "Six years in, shipping production code across global teams. Still prioritizing curiosity and technical depth over hype.",
   ] as const,
 
   /**
@@ -29,7 +29,7 @@ export const profile = {
   achievements: {
     repos: 65,
     companies: 7,
-    yearsExperience: 4,
+    yearsExperience: 6,
     continents: 4,
     systemsShipped: 12,
     uptimeSLA: "99.9%",
@@ -44,7 +44,7 @@ export const profile = {
     "I care about clean domain-driven design, defensible API surfaces, and infrastructure that holds under demanding production workloads. Whether it's a 9-layer self-hosted legal AI stack, a GPU video processing pipeline on Modal, or a real-time WebRTC collaboration platform — the priority is always the same: building systems that work, scale, and solve the problem at hand.",
   ],
   meta: {
-    experienceYears: "4+",
+    experienceYears: "6+",
     educationPrimary: "B.Sc. Computer Science",
     educationSecondary: "Federal University Oye-Ekiti",
     certification: "Software Engineering Certification",

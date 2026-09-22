@@ -19,7 +19,7 @@
 
 I'm a **Software Engineer** focused on building scalable, production-grade platforms at the intersection of web systems and applied AI. I operate end-to-end as a Full Stack Engineer — **Django Ninja** on the backend, **Node.js** when the runtime demands it, and **Next.js (App Router) + TypeScript** on the frontend — with a discipline built around strict typing, containerized delivery, and measurable system outcomes.
 
-**I architect resilient systems.** Every API I design, every schema I model, every pipeline I ship is built to hold under load, be extended by engineers I haven't met yet, and solve real problems at scale. Four years in. Seven companies. Four continents. Still prioritizing curiosity and technical depth over hype.
+**I architect resilient systems.** Every API I design, every schema I model, every pipeline I ship is built to hold under load, be extended by engineers I haven't met yet, and solve real problems at scale. Six years in. Seven companies. Four continents. Still prioritizing curiosity and technical depth over hype.
 
 > *"Focused on clean architecture, resilient systems, and measurable outcomes. I build code that works, scales, and solves the problem at hand."*
 

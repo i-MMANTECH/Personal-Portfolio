@@ -66,7 +66,7 @@ run.font.size = Pt(9)
 
 # EXEC PROFILE
 add_header(doc, "EXECUTIVE TECHNICAL PROFILE")
-p = doc.add_paragraph("Full-Stack & Systems Software Engineer with 4+ years of experience architecting distributed platforms, real-time systems, and production-grade agentic AI pipelines. Proven track record of shipping end-to-end solutions using Python (Django Ninja), TypeScript (Next.js App Router), PostgreSQL, and Docker across 7 companies globally. Adept at designing defensible API contracts, orchestrating GPU serverless infrastructure for ML workloads, and optimizing database layers to ensure high availability, low latency, and massive concurrency under load.")
+p = doc.add_paragraph("Full-Stack & Systems Software Engineer with 6+ years of experience architecting distributed platforms, real-time systems, and production-grade agentic AI pipelines. Proven track record of shipping end-to-end solutions using Python (Django Ninja), TypeScript (Next.js App Router), PostgreSQL, and Docker across 7 companies globally. Adept at designing defensible API contracts, orchestrating GPU serverless infrastructure for ML workloads, and optimizing database layers to ensure high availability, low latency, and massive concurrency under load.")
 p.paragraph_format.space_after = Pt(8)
 
 # TECHNICAL ARSENAL
