@@ -2,7 +2,7 @@ const ITEMS: readonly string[] = [
   "Currently building → Geod AI — Sovereign AI Workspace",
   "Now in production → Rosendahl @ LunarTech",
   "Shipped → Dark Phoenix GPU Pipeline",
-  "4+ years → Full Stack Engineer",
+  "6+ years → Full Stack Engineer",
   "Open to → Staff / Principal roles",
   "Based in → Lagos, NG · Remote-first · Global talent",
   "Stack → Django Ninja · Next.js · LangGraph · LlamaIndex · PostgreSQL",

@@ -13,7 +13,7 @@ import "./globals.css";
 const SITE_URL = "https://emmanuelaro.netlify.app";
 const SITE_NAME = "Emmanuel Mobolaji Aro — Software Engineer · Global Talent";
 const SITE_DESCRIPTION =
-  "Emmanuel Mobolaji Aro — Full Stack Software Engineer based in Lagos, Nigeria (Open to Global Remote). Architecting Agentic AI systems, distributed platforms, and applied-ML solutions at LunarTech. 4+ years. 65+ repos. 4 continents. Django Ninja · Next.js · TypeScript · LangGraph · LlamaIndex.";
+  "Emmanuel Mobolaji Aro — Full Stack Software Engineer based in Lagos, Nigeria (Open to Global Remote). Architecting Agentic AI systems, distributed platforms, and applied-ML solutions at LunarTech. 6+ years. 65+ repos. 4 continents. Django Ninja · Next.js · TypeScript · LangGraph · LlamaIndex.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
